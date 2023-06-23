@@ -1,40 +1,86 @@
--- ds.page: Welcome to doc-site
+-- import: fastn-community.github.io/business-card/docs
+-- import: fastn-community.github.io/business-card
+
+-- docs.home: John Doe
+title: Software Developer
+email: john@xyz.com
+address: 123 Anywhere, Any City
+github: https://github.com/fastn-community/business-card
 
 
-⚡️ `doc-site` will help you create a beautiful documentation site in no time.
-
-It provides out-of-the-box documentation features that can be used to create any
-kind of site(personal website, blog, etc).
-
-[Click here](https://fastn-community.github.io/doc-site/) to read doc-site
-documentation.
-
--- ds.h3: 🚀 Fast Track 
-
-Create your first fastn [web-site](https://fastn.com/expander/hello-world/-/build/) 
-project in just 5 minutes!
-
--- ds.h3: 🌟 Whats next?
-
-Create your first page. 
-[Click here to know more](https://fastn-community.github.io/doc-site/page/).
-
--- ds.h3: 👀 Want to learn more?
-
-Feel free to check [our expander course](https://fastn.com/expander/) or jump
-into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
 
 
--- ds.h3: 🎯 Used by?
 
-Our all documentation sites uses this `doc-site` theme.
 
-- [fastn.com](https://fastn.com/home/)
-- [FifthTry.com](https://www.fifthtry.com/)
 
--- ds.h2: Learn fastn and become a pro?
 
-You are one click away, just check [our documentation](https://fastn.com/) and 
-dont forget to jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+-- ftd.image-src default-card-logo: $assets.files.assets.ipsum-logo.svg
 
--- end: ds.page
+-- component card:
+caption name:
+optional string company-name:
+optional string title:
+optional string phone-no:
+optional string email:
+optional string address:
+optional ftd.image-src logo:
+optional ftd.image-src avatar:
+
+-- ftd.row:
+width.fixed.px: 700
+height.fixed.px: 350
+background.solid: #333333
+spacing: space-around
+
+-- ftd.column:
+width.fixed.percent: 50
+height: fill-container
+align-content: center
+spacing: space-around
+
+-- ftd.image: $card.logo
+if: { card.logo != NULL }
+width.fixed.px: 250
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 50
+height: fill-container
+align-content: center
+border-left-width.px: 2
+border-color: $inherited.colors.border-strong
+
+-- ftd.text: $card.name
+color: $inherited.colors.text-strong
+role: $inherited.types.heading-small
+
+-- ftd.text: $card.title
+if: { card.title != NULL }
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- ftd.text: $card.phone-no
+if: { card.phone-no != NULL }
+margin-top.px: 50
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- ftd.text: $card.email
+if: { card.email != NULL }
+margin-top.px if { card.phone-no == NULL }: 50
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- ftd.text: $card.address
+if: { card.address != NULL }
+margin-top.px if { card.phone-no == NULL && card.email == NULL }: 50
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: card
+

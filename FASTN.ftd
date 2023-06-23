@@ -4,15 +4,18 @@
 favicon: /-/fastn-community.github.io/business-card/favicon.ico
 
 
--- fastn.dependency: fastn-community.github.io/doc-site
+-- fastn.dependency: fastn-community.github.io/doc-site as doc-site
 -- fastn.dependency: fastn-community.github.io/footer
+-- fastn.dependency: fastn-community.github.io/roboto-typography
 
 -- fastn.auto-import: fastn-community.github.io/business-card/FASTN/ds
 -- fastn.auto-import: fastn-community.github.io/business-card/assets
-
+-- fastn.auto-import: doc-site
 
 -- fastn.sitemap:
 
 # Home: /
 
-- Right Sidebar Sample: /sidebar/
+- Overview: /
+
+- How to Use: /how-to-use/

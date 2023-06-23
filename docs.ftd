@@ -1,0 +1,75 @@
+-- import: fastn-community.github.io/business-card
+
+
+-- ftd.image-src s1: $assets.files.assets.ipsum-logo.svg
+
+-- component home:
+caption name:
+module c: business-card
+optional string company-name:
+optional string title:
+optional string phone-no:
+optional string email:
+optional string address:
+optional ftd.image-src logo: $business-card.default-card-logo
+optional ftd.image-src avatar:
+optional string github:
+
+
+-- ds.page: Home page
+sidebar: false
+
+This is home page content
+
+-- ds.h1: This is card
+
+-- home.c.card: $home.name
+title: $home.title
+phone-no: $home.phone-no
+email: $home.email
+address: $home.address
+logo: $home.logo
+company-name: $home.company-name
+avatar: $home.avatar
+
+-- end: ds.page
+
+-- end: home
+
+
+
+
+
+
+
+
+
+
+-- component how-to-use:
+caption name:
+module c: business-card
+optional string title:
+optional string phone-no:
+optional string email:
+optional string address:
+optional ftd.image-src logo: $business-card.default-card-logo
+optional string github:
+
+
+-- ds.page: How to Use
+sidebar: false
+
+This will be how-to-use page
+
+-- ds.h1: This is card
+
+-- how-to-use.c.card: $how-to-use.name
+title: $how-to-use.title
+phone-no: $how-to-use.phone-no
+email: $how-to-use.email
+address: $how-to-use.address
+logo: $how-to-use.logo
+
+-- end: ds.page
+
+-- end: how-to-use
