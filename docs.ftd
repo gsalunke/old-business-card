@@ -138,7 +138,7 @@ logo: $how-to-use.logo
 caption name:
 string package-name: business-card
 string package-full-name: fastn-community.github.io/business-card
-optional string license-url:
+string license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
 module c: business-card
 optional string company-name:
 optional string title:
@@ -190,7 +190,7 @@ avatar: $home-card.avatar
 caption name:
 string package-name: business-card
 string package-full-name: fastn-community.github.io/business-card
-optional string license-url:
+string license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
 module c: business-card
 optional string company-name:
 optional string title:
@@ -204,6 +204,8 @@ optional string github:
 -- site-doc.doc-home: Documentation - Card
 site-title: $how-to-use-card.package-name
 show-tabs: false
+license-url if { how-to-use-card.license-url != NULL }: $how-to-use-card.license-url
+current-package: $how-to-use-card.github
 
 -- site-doc.component-doc: `badge`
 package-link: $how-to-use-card.package-full-name
