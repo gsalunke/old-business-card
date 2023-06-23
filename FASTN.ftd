@@ -16,12 +16,14 @@ favicon: /-/fastn-community.github.io/business-card/favicon.ico
 
 -- fastn.sitemap:
 
-# Home: /
+# Home: index.html
 
-- Overview: /
+- Overview: index.html
 
 - How to Use: /how-to-use/
 
-- Home Card: /home-card/
+# Card: /home-card/
+
+- Overview: /home-card/
 
 - How to Use Card: /how-to-use-card/
