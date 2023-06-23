@@ -29,7 +29,7 @@ optional ftd.image-src avatar:
 -- ftd.row:
 width.fixed.px: 700
 height.fixed.px: 350
-background.solid: #333333
+background.solid: $card-background-color
 spacing: space-around
 
 -- ftd.column:
@@ -83,4 +83,15 @@ role: $inherited.types.copy-regular
 -- end: ftd.row
 
 -- end: card
+
+
+
+
+
+
+
+
+-- ftd.color card-background-color:
+light: #f4edd0
+dark: black
 
