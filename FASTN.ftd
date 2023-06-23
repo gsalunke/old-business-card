@@ -7,9 +7,11 @@ favicon: /-/fastn-community.github.io/business-card/favicon.ico
 -- fastn.dependency: fastn-community.github.io/doc-site as doc-site
 -- fastn.dependency: fastn-community.github.io/footer
 -- fastn.dependency: fastn-community.github.io/roboto-typography
+-- fastn.dependency: fastn-community.github.io/site-doc
 
 -- fastn.auto-import: fastn-community.github.io/business-card/FASTN/ds
 -- fastn.auto-import: fastn-community.github.io/business-card/assets
+-- fastn.auto-import: fastn-community.github.io/site-doc
 -- fastn.auto-import: doc-site
 
 -- fastn.sitemap:
@@ -19,3 +21,7 @@ favicon: /-/fastn-community.github.io/business-card/favicon.ico
 - Overview: /
 
 - How to Use: /how-to-use/
+
+- Home Card: /home-card/
+
+- How to Use Card: /how-to-use-card/

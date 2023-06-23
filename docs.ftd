@@ -1,10 +1,19 @@
 -- import: fastn-community.github.io/business-card
 
+;; home - for business card
+;; how to use - for business card documentation components
 
--- ftd.image-src s1: $assets.files.assets.ipsum-logo.svg
+;; home - for card component
+;; how to use - card component
+
+
+
 
 -- component home:
 caption name:
+string package-name: business-card
+string deployed-url: fastn-community.github.io/business-card
+optional string license-url:
 module c: business-card
 optional string company-name:
 optional string title:
@@ -16,12 +25,17 @@ optional ftd.image-src avatar:
 optional string github:
 
 
--- ds.page: Home page
-sidebar: false
+-- site-doc.doc-home: $concat2(a = fastn-package:, b = $home.package-name)
+license-url if { home.license-url != NULL }: $home.license-url
+current-package: $home.github
+show-tabs: false
+site-title: $home.package-name
 
-This is home page content
+-- site-doc.output:
 
--- ds.h1: This is card
+-- ftd.text: Default card
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
 
 -- home.c.card: $home.name
 title: $home.title
@@ -32,7 +46,34 @@ logo: $home.logo
 company-name: $home.company-name
 avatar: $home.avatar
 
--- end: ds.page
+-- end: site-doc.output
+
+-- site-doc.header: Module card signature
+
+Below mentioned is the card definition details which needs to be implemented
+inside the specified module `c` before using any docs component. If not
+passed, then it will use the card definition from the default module
+
+**Default module**: `fastn-community.github.io/business-card`
+
+-- ds.code: Card signature
+lang: ftd
+
+\-- component card:
+caption name:
+optional string company-name:
+optional string title:
+optional string phone-no:
+optional string email:
+optional string address:
+optional ftd.image-src logo:
+optional ftd.image-src avatar:
+
+\;; <YOUR CARD IMPLEMENTATION HERE>
+
+\-- end: card
+
+-- end: site-doc.doc-home
 
 -- end: home
 
@@ -47,17 +88,25 @@ avatar: $home.avatar
 
 -- component how-to-use:
 caption name:
+string package-name: business-card
+string deployed-url: fastn-community.github.io/business-card
+optional string license-url:
 module c: business-card
+optional string company-name:
 optional string title:
 optional string phone-no:
 optional string email:
 optional string address:
 optional ftd.image-src logo: $business-card.default-card-logo
+optional ftd.image-src avatar:
 optional string github:
 
 
--- ds.page: How to Use
-sidebar: false
+-- site-doc.doc-home: $concat2(a = fastn-package:, b = $how-to-use.package-name)
+license-url if { how-to-use.license-url != NULL }: $how-to-use.license-url
+current-package: $how-to-use.github
+show-tabs: false
+site-title: $how-to-use.package-name
 
 This will be how-to-use page
 
@@ -70,6 +119,231 @@ email: $how-to-use.email
 address: $how-to-use.address
 logo: $how-to-use.logo
 
--- end: ds.page
+-- end: site-doc.doc-home
 
 -- end: how-to-use
+
+
+
+
+
+
+
+
+
+
+
+
+-- component home-card:
+caption name:
+string package-name: business-card
+string package-full-name: fastn-community.github.io/business-card
+string deployed-url: fastn-community.github.io/business-card
+optional string license-url:
+module c: business-card
+optional string company-name:
+optional string title:
+optional string phone-no:
+optional string email:
+optional string address:
+optional ftd.image-src logo: $business-card.default-card-logo
+optional ftd.image-src avatar:
+optional string github:
+
+-- site-doc.doc-home: $concat2(a = fastn-package:, b = $home-card.package-name)
+license-url if { home-card.license-url != NULL }: $home-card.license-url
+current-package: $home-card.github
+show-tabs: false
+site-title: $home-card.package-name
+
+-- site-doc.output:
+
+-- home-card.c.card: $home-card.name
+title: $home-card.title
+phone-no: $home-card.phone-no
+email: $home-card.email
+address: $home-card.address
+logo: $home-card.logo
+company-name: $home-card.company-name
+avatar: $home-card.avatar
+
+-- end: site-doc.output
+
+-- end: site-doc.doc-home
+
+-- end: home-card
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component how-to-use-card:
+caption name:
+string package-name: business-card
+string package-full-name: fastn-community.github.io/business-card
+string deployed-url: fastn-community.github.io/business-card
+optional string license-url:
+module c: business-card
+optional string company-name:
+optional string title:
+optional string phone-no:
+optional string email:
+optional string address:
+optional ftd.image-src logo: $business-card.default-card-logo
+optional ftd.image-src avatar:
+optional string github:
+
+-- site-doc.doc-home: Documentation - Card
+site-title: $how-to-use-card.package-name
+show-tabs: false
+
+-- site-doc.component-doc: `badge`
+package-link: $how-to-use-card.deployed-url
+package-name: $how-to-use-card.package-full-name
+
+-- site-doc.component-doc.info:
+
+`-- card` can be used anywhere inside your fastn projects and will generate
+your business card.
+
+-- site-doc.component-doc.body:
+
+This is a card component which will render your data
+as a business card.
+
+-- site-doc.header: How to use
+
+-- ds.code: $concat3(a = Add, b = $how-to-use-card.package-name, c = dependency into your FASTN.ftd)
+lang: ftd
+
+$concat2(a = -- fastn.dependency:, b = $how-to-use-card.package-full-name)
+
+-- ds.code: Sample usage
+lang: ftd
+
+$card-invocation-sample
+
+-- site-doc.header: Preview
+
+-- how-to-use-card.c.card: $how-to-use-card.name
+title: $how-to-use-card.title
+phone-no: $how-to-use-card.phone-no
+email: $how-to-use-card.email
+address: $how-to-use-card.address
+logo: $how-to-use-card.logo
+company-name: $how-to-use-card.company-name
+avatar: $how-to-use-card.avatar
+
+-- site-doc.header: Card signature
+
+Below mentioned is the card signature with all the properties allowed to be
+modified when using this component.
+
+-- ds.code: Card signature
+lang: ftd
+
+\-- component card:
+caption name:
+optional string company-name:
+optional string title:
+optional string phone-no:
+optional string email:
+optional string address:
+optional ftd.image-src logo:
+optional ftd.image-src avatar:
+
+\;; <IMPLEMENTATION OMIITED>
+
+\-- end: card
+
+-- site-doc.header: Properties:
+
+Below are details of all properties of `card` component.
+
+-- site-doc.component-property: `name`
+type: Caption (`required`)
+
+It's used to define the person's name for your card component.
+
+-- site-doc.component-property: `company-name`
+type: String (`optional`)
+
+It's used to define the company name for your card component.
+
+-- site-doc.component-property: `title`
+type: String (`optional`)
+
+It's used to define the person's business title for your card component.
+
+-- site-doc.component-property: `phone-no`
+type: String (`optional`)
+
+It's used to define the person's contact number (phone number) for your card
+component.
+
+-- site-doc.component-property: `email`
+type: String (`optional`)
+
+It's used to define the person's email address for your card component.
+
+-- site-doc.component-property: `address`
+type: String (`optional`)
+
+It's used to define the person's address for your card component.
+
+-- site-doc.component-property: `logo`
+type: ftd.image-src (`optional`)
+
+It's used to define the business logo for your card component.
+
+-- site-doc.component-property: `avatar`
+type: ftd.image-src (`optional`)
+
+It's used to define the person's avatar for your card component.
+
+-- end: site-doc.doc-home
+
+-- end: how-to-use-card
+
+
+
+-- string card-invocation-sample:
+
+\-- ftd.image-src default-card-logo: $assets.files.assets.ipsum-logo.svg
+
+\-- card: John Doe
+title: Software Developer
+email: john@xyz.com
+address: 123 Anywhere, Any City
+logo: $default-card-logo
+
+
+
+
+
+
+
+
+
+-- string concat2(a,b):
+string a:
+string b:
+
+a + " " + b
+
+-- string concat3(a,b,c):
+string a:
+string b:
+string c:
+
+a + " `" + b + "` " + c
