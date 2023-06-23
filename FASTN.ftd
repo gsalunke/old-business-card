@@ -21,6 +21,7 @@ favicon: /-/fastn-community.github.io/business-card/favicon.ico
 - Overview: index.html
 
 - How to Use: /how-to-use/
+  skip: true
 
 # Card: /home-card/
 
