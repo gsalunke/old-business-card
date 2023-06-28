@@ -16,6 +16,8 @@ string deployed-url: fastn-community.github.io/business-card
 optional string license-url:
 module c: business-card
 optional string company-name:
+optional string company-slogan:
+optional ftd.image-src qr-code:
 optional string title:
 optional string phone-no:
 optional string email:
@@ -33,7 +35,7 @@ site-title: $home.package-name
 
 -- site-doc.output:
 
--- ftd.text: Default card
+-- ftd.text: Default card (front)
 role: $inherited.types.heading-medium
 color: $inherited.colors.text-strong
 
@@ -45,14 +47,32 @@ address: $home.address
 logo: $home.logo
 company-name: $home.company-name
 avatar: $home.avatar
+company-slogan: $home.company-slogan
+qr-code: $home.qr-code
+
+-- ftd.text: Default card (back)
+role: $inherited.types.heading-medium
+margin-top.px: 10
+color: $inherited.colors.text-strong
+
+-- home.c.card-back: $home.name
+title: $home.title
+phone-no: $home.phone-no
+email: $home.email
+address: $home.address
+logo: $home.logo
+company-name: $home.company-name
+avatar: $home.avatar
+company-slogan: $home.company-slogan
+qr-code: $home.qr-code
 
 -- end: site-doc.output
 
--- site-doc.header: Module card signature
+-- site-doc.header: Module signature
 
-Below mentioned is the card definition details which needs to be implemented
-inside the specified module `c` before using any docs component. If not
-passed, then it will use the card definition from the default module
+Below mentioned is the card and card-back definition details which needs to be
+implemented inside the specified module `c` before using any docs component. If
+not passed, then it will use the default definitions from the default module.
 
 **Default module**: `fastn-community.github.io/business-card`
 
@@ -68,10 +88,31 @@ optional string email:
 optional string address:
 optional ftd.image-src logo:
 optional ftd.image-src avatar:
+optional string company-slogan:
+optional ftd.image-src qr-code:
 
 \;; <YOUR CARD IMPLEMENTATION HERE>
 
 \-- end: card
+
+-- ds.code: Card-back signature
+lang: ftd
+
+\-- component card-back:
+caption name:
+optional string company-name:
+optional string title:
+optional string phone-no:
+optional string email:
+optional string address:
+optional ftd.image-src logo:
+optional ftd.image-src avatar:
+optional string company-slogan:
+optional ftd.image-src qr-code:
+
+\;; <YOUR CARD-BACK IMPLEMENTATION HERE>
+
+\-- end: card-back
 
 -- end: site-doc.doc-home
 
@@ -93,6 +134,8 @@ string deployed-url: fastn-community.github.io/business-card
 optional string license-url:
 module c: business-card
 optional string company-name:
+optional string company-slogan:
+optional ftd.image-src qr-code:
 optional string title:
 optional string phone-no:
 optional string email:
@@ -118,6 +161,8 @@ phone-no: $how-to-use.phone-no
 email: $how-to-use.email
 address: $how-to-use.address
 logo: $how-to-use.logo
+company-slogan: $how-to-use.company-slogan
+qr-code: $how-to-use.qr-code
 
 -- end: site-doc.doc-home
 
@@ -141,6 +186,8 @@ string package-full-name: fastn-community.github.io/business-card
 string license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
 module c: business-card
 optional string company-name:
+optional string company-slogan:
+optional ftd.image-src qr-code:
 optional string title:
 optional string phone-no:
 optional string email:
@@ -157,6 +204,8 @@ site-title: $home-card.package-name
 
 -- site-doc.output:
 
+-- ds.h1: Card Front
+
 -- home-card.c.card: $home-card.name
 title: $home-card.title
 phone-no: $home-card.phone-no
@@ -165,6 +214,21 @@ address: $home-card.address
 logo: $home-card.logo
 company-name: $home-card.company-name
 avatar: $home-card.avatar
+company-slogan: $home-card.company-slogan
+qr-code: $home-card.qr-code
+
+-- ds.h1: Card Back
+
+-- home-card.c.card-back: $home-card.name
+title: $home-card.title
+phone-no: $home-card.phone-no
+email: $home-card.email
+address: $home-card.address
+logo: $home-card.logo
+company-name: $home-card.company-name
+avatar: $home-card.avatar
+company-slogan: $home-card.company-slogan
+qr-code: $home-card.qr-code
 
 -- end: site-doc.output
 
@@ -193,6 +257,8 @@ string package-full-name: fastn-community.github.io/business-card
 string license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
 module c: business-card
 optional string company-name:
+optional string company-slogan: 
+optional ftd.image-src qr-code:
 optional string title:
 optional string phone-no:
 optional string email:
@@ -200,6 +266,7 @@ optional string address:
 optional ftd.image-src logo: $business-card.default-card-logo
 optional ftd.image-src avatar:
 optional string github:
+string sample-code:
 
 -- site-doc.doc-home: Documentation - Card
 site-title: $how-to-use-card.package-name
@@ -207,19 +274,8 @@ show-tabs: false
 license-url if { how-to-use-card.license-url != NULL }: $how-to-use-card.license-url
 current-package: $how-to-use-card.github
 
--- site-doc.component-doc: `badge`
-package-link: $how-to-use-card.package-full-name
-package-name: $how-to-use-card.package-full-name
-
--- site-doc.component-doc.info:
-
-`-- card` can be used anywhere inside your fastn projects and will generate
-your business card.
-
--- site-doc.component-doc.body:
-
 This is a card component which will render your data
-as a business card.
+as a business card (front-view).
 
 -- site-doc.header: How to use
 
@@ -231,7 +287,7 @@ $concat2(a = -- fastn.dependency:, b = $how-to-use-card.package-full-name)
 -- ds.code: Sample usage
 lang: ftd
 
-$card-invocation-sample
+$how-to-use-card.sample-code
 
 -- site-doc.header: Preview
 
@@ -243,11 +299,13 @@ address: $how-to-use-card.address
 logo: $how-to-use-card.logo
 company-name: $how-to-use-card.company-name
 avatar: $how-to-use-card.avatar
+company-slogan: $how-to-use-card.company-slogan
+qr-code: $how-to-use-card.qr-code
 
 -- site-doc.header: Card signature
 
-Below mentioned is the card signature with all the properties allowed to be
-modified when using this component.
+Below mentioned is the card signature with all the allowed properties when
+using this component.
 
 -- ds.code: Card signature
 lang: ftd
@@ -261,6 +319,8 @@ optional string email:
 optional string address:
 optional ftd.image-src logo:
 optional ftd.image-src avatar:
+optional string company-slogan:
+optional ftd.image-src qr-code:
 
 \;; <IMPLEMENTATION OMIITED>
 
@@ -311,21 +371,163 @@ type: ftd.image-src (`optional`)
 
 It's used to define the person's avatar for your card component.
 
+-- site-doc.component-property: `company-slogan`
+type: String (`optional`)
+
+It's used to define the company slogan for your card-back component.
+
+-- site-doc.component-property: `qr-code`
+type: ftd.image-src (`optional`)
+
+It's used to define any external qr-code for your card-back component.
+
 -- end: site-doc.doc-home
 
 -- end: how-to-use-card
 
 
 
--- string card-invocation-sample:
 
-\-- ftd.image-src default-card-logo: $assets.files.assets.ipsum-logo.svg
 
-\-- card: John Doe
-title: Software Developer
-email: john@xyz.com
-address: 123 Anywhere, Any City
-logo: $default-card-logo
+
+
+
+
+-- component how-to-use-card-back:
+optional caption name:
+string package-name: business-card
+string package-full-name: fastn-community.github.io/business-card
+string license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
+module c: business-card
+optional string company-name:
+optional string company-slogan: 
+optional ftd.image-src qr-code:
+optional string title:
+optional string phone-no:
+optional string email:
+optional string address:
+optional ftd.image-src logo: $business-card.default-card-logo
+optional ftd.image-src avatar:
+optional string github:
+string sample-code:
+
+-- site-doc.doc-home: Documentation - Card Back
+site-title: $how-to-use-card-back.package-name
+show-tabs: false
+license-url if { how-to-use-card-back.license-url != NULL }: $how-to-use-card-back.license-url
+current-package: $how-to-use-card-back.package-full-name
+
+This is a card-back component which will render your data
+as a business card (back-view).
+
+-- site-doc.header: How to use
+
+-- ds.code: $concat3(a = Add, b = $how-to-use-card-back.package-name, c = dependency into your FASTN.ftd)
+lang: ftd
+
+$concat2(a = -- fastn.dependency:, b = $how-to-use-card-back.package-full-name)
+
+-- ds.code: Sample usage
+lang: ftd
+
+$how-to-use-card-back.sample-code
+
+-- site-doc.header: Preview
+
+-- how-to-use-card-back.c.card-back: $how-to-use-card-back.name
+title: $how-to-use-card-back.title
+phone-no: $how-to-use-card-back.phone-no
+email: $how-to-use-card-back.email
+address: $how-to-use-card-back.address
+logo: $how-to-use-card-back.logo
+company-name: $how-to-use-card-back.company-name
+avatar: $how-to-use-card-back.avatar
+company-slogan: $how-to-use-card-back.company-slogan
+qr-code: $how-to-use-card-back.qr-code
+
+-- site-doc.header: Card-Back signature
+
+Below mentioned is the card-back component signature with all the
+allowed properties when using this component.
+
+-- ds.code: card-back signature
+lang: ftd
+
+\-- component card-back:
+optional caption name:
+optional string company-name:
+optional string title:
+optional string phone-no:
+optional string email:
+optional string address:
+optional ftd.image-src logo:
+optional ftd.image-src avatar:
+optional string company-slogan:
+optional ftd.image-src qr-code:
+
+\;; <IMPLEMENTATION OMIITED>
+
+\-- end: card-back
+
+-- site-doc.header: Properties:
+
+Below are details of all properties of `card-back` component.
+
+-- site-doc.component-property: `name`
+type: Caption (`required`)
+
+It's used to define the person's name for your card-back component.
+
+-- site-doc.component-property: `company-name`
+type: String (`optional`)
+
+It's used to define the company name for your card-back component.
+
+-- site-doc.component-property: `title`
+type: String (`optional`)
+
+It's used to define the person's business title for your card-back component.
+
+-- site-doc.component-property: `phone-no`
+type: String (`optional`)
+
+It's used to define the person's contact number (phone number) for your card
+component.
+
+-- site-doc.component-property: `email`
+type: String (`optional`)
+
+It's used to define the person's email address for your card-back component.
+
+-- site-doc.component-property: `address`
+type: String (`optional`)
+
+It's used to define the person's address for your card-back component.
+
+-- site-doc.component-property: `logo`
+type: ftd.image-src (`optional`)
+
+It's used to define the business logo for your card-back component.
+
+-- site-doc.component-property: `avatar`
+type: ftd.image-src (`optional`)
+
+It's used to define the person's avatar for your card-back component.
+
+-- site-doc.component-property: `company-slogan`
+type: String (`optional`)
+
+It's used to define the company slogan for your card-back component.
+
+-- site-doc.component-property: `qr-code`
+type: ftd.image-src (`optional`)
+
+It's used to define any external qr-code for your card-back component.
+
+-- end: site-doc.doc-home
+
+-- end: how-to-use-card-back
+
 
 
 

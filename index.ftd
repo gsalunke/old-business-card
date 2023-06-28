@@ -11,10 +11,39 @@ github: https://github.com/fastn-community/business-card
 
 
 
+;; ----------------------- VARIABLES ----------------------------------
 
+-- string default-card-sample-code:
 
+\-- import: fastn-community.github.io/business-card as b
+
+\-- ftd.image-src default-card-logo: $assets.files.assets.ipsum-logo.svg
+
+\-- b.card: John Doe
+title: Software Developer
+email: john@xyz.com
+address: 123 Anywhere, Any City
+logo: $default-card-logo
+
+-- string default-card-back-sample-code:
+
+\-- import: fastn-community.github.io/business-card as b
+
+\-- ftd.image-src default-card-logo: $assets.files.assets.ipsum-logo.svg
+
+\-- b.card-back: John Doe
+title: Software Developer
+email: john@xyz.com
+address: 123 Anywhere, Any City
+logo: $default-card-logo
 
 -- ftd.image-src default-card-logo: $assets.files.assets.ipsum-logo.svg
+
+-- ftd.color card-background-color:
+light: #f4edd0
+dark: black
+
+;; ---------------------- DEFAULT CARD COMPONENTS -------------------------
 
 -- component card:
 caption name:
@@ -25,6 +54,8 @@ optional string email:
 optional string address:
 optional ftd.image-src logo:
 optional ftd.image-src avatar:
+optional string company-slogan:
+optional ftd.image-src qr-code:
 
 -- ftd.row:
 width.fixed.px: 700
@@ -91,7 +122,51 @@ role: $inherited.types.copy-regular
 
 
 
--- ftd.color card-background-color:
-light: #f4edd0
-dark: black
+
+
+-- component card-back:
+optional caption name:
+optional string company-name:
+optional string title:
+optional string phone-no:
+optional string email:
+optional string address:
+optional ftd.image-src logo:
+optional ftd.image-src avatar:
+optional string company-slogan:
+optional ftd.image-src qr-code:
+
+-- ftd.row:
+width.fixed.px: 700
+height.fixed.px: 350
+background.solid: $card-background-color
+spacing: space-around
+align-content: center
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+margin.px: 50
+border-left-width.px: 8
+border-right-width.px: 8
+border-style: double
+border-color: $inherited.colors.border-strong
+align-content: center
+
+-- ftd.image: $card-back.logo
+if: { card-back.logo != NULL }
+width.fixed.px: 250
+
+-- ftd.text: $card-back.company-slogan
+if: { card-back.company-slogan != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
+width: fill-container
+text-align: center
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: card-back
 
