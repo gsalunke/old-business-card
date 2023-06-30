@@ -307,31 +307,6 @@ company-slogan: $how-to-use-card.company-slogan
 qr-code: $how-to-use-card.qr-code
 website: $how-to-use-card.website
 
--- site-doc.header: Card signature
-
-Below mentioned is the card signature with all the allowed properties when
-using this component.
-
--- cb.code: Card signature
-lang: ftd
-
-\-- component card:
-caption name:
-optional string company-name:
-optional string title:
-optional string phone-no:
-optional string email:
-optional string address:
-optional ftd.image-src logo:
-optional ftd.image-src avatar:
-optional string company-slogan:
-optional ftd.image-src qr-code:
-optional string website:
-
-\;; <IMPLEMENTATION OMIITED>
-
-\-- end: card
-
 -- site-doc.header: Properties:
 
 Below are details of all properties of `card` component.
@@ -380,12 +355,17 @@ It's used to define the person's avatar for your card component.
 -- site-doc.component-property: `company-slogan`
 type: String (`optional`)
 
-It's used to define the company slogan for your card-back component.
+It's used to define the company slogan for your card component.
 
 -- site-doc.component-property: `qr-code`
 type: ftd.image-src (`optional`)
 
-It's used to define any external qr-code for your card-back component.
+It's used to define any external qr-code for your card component.
+
+-- site-doc.component-property: `website`
+type: String (`optional`)
+
+It's used to define any website for your card component.
 
 -- end: site-doc.doc-home
 
@@ -453,31 +433,6 @@ company-slogan: $how-to-use-card-back.company-slogan
 qr-code: $how-to-use-card-back.qr-code
 website: $how-to-use-card-back.website
 
--- site-doc.header: Card-Back signature
-
-Below mentioned is the card-back component signature with all the
-allowed properties when using this component.
-
--- cb.code: card-back signature
-lang: ftd
-
-\-- component card-back:
-optional caption name:
-optional string company-name:
-optional string title:
-optional string phone-no:
-optional string email:
-optional string address:
-optional ftd.image-src logo:
-optional ftd.image-src avatar:
-optional string company-slogan:
-optional ftd.image-src qr-code:
-optional string website:
-
-\;; <IMPLEMENTATION OMIITED>
-
-\-- end: card-back
-
 -- site-doc.header: Properties:
 
 Below are details of all properties of `card-back` component.
@@ -532,6 +487,11 @@ It's used to define the company slogan for your card-back component.
 type: ftd.image-src (`optional`)
 
 It's used to define any external qr-code for your card-back component.
+
+-- site-doc.component-property: `website`
+type: String (`optional`)
+
+It's used to define any website for your card-back component.
 
 -- end: site-doc.doc-home
 
