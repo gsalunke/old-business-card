@@ -4,15 +4,14 @@
 favicon: /-/fastn-community.github.io/business-card/favicon.ico
 
 
--- fastn.dependency: fastn-community.github.io/doc-site as doc-site
--- fastn.dependency: fastn-community.github.io/footer
--- fastn.dependency: fastn-community.github.io/roboto-typography
 -- fastn.dependency: fastn-community.github.io/site-doc
+-- fastn.dependency: fastn-community.github.io/typography as tf
+-- fastn.dependency: fastn-community.github.io/code-block as cb
 
--- fastn.auto-import: fastn-community.github.io/business-card/FASTN/ds
 -- fastn.auto-import: fastn-community.github.io/business-card/assets
 -- fastn.auto-import: fastn-community.github.io/site-doc
--- fastn.auto-import: doc-site
+-- fastn.auto-import: cb
+-- fastn.auto-import: tf
 
 -- fastn.sitemap:
 

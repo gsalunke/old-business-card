@@ -76,7 +76,7 @@ not passed, then it will use the default definitions from the default module.
 
 **Default module**: `fastn-community.github.io/business-card`
 
--- ds.code: Card signature
+-- cb.code: Card signature
 lang: ftd
 
 \-- component card:
@@ -95,7 +95,7 @@ optional ftd.image-src qr-code:
 
 \-- end: card
 
--- ds.code: Card-back signature
+-- cb.code: Card-back signature
 lang: ftd
 
 \-- component card-back:
@@ -153,7 +153,7 @@ site-title: $how-to-use.package-name
 
 This will be how-to-use page
 
--- ds.h1: This is card
+-- tf.h1: This is card
 
 -- how-to-use.c.card: $how-to-use.name
 title: $how-to-use.title
@@ -205,7 +205,7 @@ site-title: $home-card.package-name
 
 -- site-doc.output:
 
--- ds.h1: Card Front
+-- tf.h1: Card Front
 
 -- home-card.c.card: $home-card.name
 title: $home-card.title
@@ -219,7 +219,7 @@ company-slogan: $home-card.company-slogan
 qr-code: $home-card.qr-code
 website: $home-card.website
 
--- ds.h1: Card Back
+-- tf.h1: Card Back
 
 -- home-card.c.card-back: $home-card.name
 title: $home-card.title
@@ -283,12 +283,12 @@ as a business card (front-view).
 
 -- site-doc.header: How to use
 
--- ds.code: $concat3(a = Add, b = $how-to-use-card.package-name, c = dependency into your FASTN.ftd)
+-- cb.code: $concat3(a = Add, b = $how-to-use-card.package-name, c = dependency into your FASTN.ftd)
 lang: ftd
 
 $concat2(a = -- fastn.dependency:, b = $how-to-use-card.package-full-name)
 
--- ds.code: Sample usage
+-- cb.code: Sample usage
 lang: ftd
 
 $how-to-use-card.sample-code
@@ -312,7 +312,7 @@ website: $how-to-use-card.website
 Below mentioned is the card signature with all the allowed properties when
 using this component.
 
--- ds.code: Card signature
+-- cb.code: Card signature
 lang: ftd
 
 \-- component card:
@@ -429,12 +429,12 @@ as a business card (back-view).
 
 -- site-doc.header: How to use
 
--- ds.code: $concat3(a = Add, b = $how-to-use-card-back.package-name, c = dependency into your FASTN.ftd)
+-- cb.code: $concat3(a = Add, b = $how-to-use-card-back.package-name, c = dependency into your FASTN.ftd)
 lang: ftd
 
 $concat2(a = -- fastn.dependency:, b = $how-to-use-card-back.package-full-name)
 
--- ds.code: Sample usage
+-- cb.code: Sample usage
 lang: ftd
 
 $how-to-use-card-back.sample-code
@@ -458,7 +458,7 @@ website: $how-to-use-card-back.website
 Below mentioned is the card-back component signature with all the
 allowed properties when using this component.
 
--- ds.code: card-back signature
+-- cb.code: card-back signature
 lang: ftd
 
 \-- component card-back:
