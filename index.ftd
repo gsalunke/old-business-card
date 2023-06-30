@@ -15,9 +15,9 @@ github: fastn-community.github.io/business-card
 
 -- string default-card-sample-code:
 
-\-- import: fastn-community.github.io/business-card as b
+\-- import: fastn-community.github.io/business-card
 
-\-- b.front: John Doe
+\-- business-card.front: John Doe
 title: Software Developer
 email: john@xyz.com
 address: 123 Anywhere, Any City
@@ -25,9 +25,9 @@ logo: $assets.files.assets.ipsum-logo.svg
 
 -- string default-back-sample-code:
 
-\-- import: fastn-community.github.io/business-card as b
+\-- import: fastn-community.github.io/business-card
 
-\-- b.back: 
+\-- business-card.back: 
 logo: $assets.files.assets.ipsum-logo.svg
 company-slogan: If you can type you can code
 
