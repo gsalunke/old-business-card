@@ -54,6 +54,7 @@ optional ftd.image-src logo:
 optional ftd.image-src avatar:
 optional string company-slogan:
 optional ftd.image-src qr-code:
+optional string website:
 
 -- ftd.row:
 width.fixed.px: 700
@@ -133,6 +134,7 @@ optional ftd.image-src logo:
 optional ftd.image-src avatar:
 optional string company-slogan:
 optional ftd.image-src qr-code:
+optional string website:
 
 -- ftd.row:
 width.fixed.px: 700
