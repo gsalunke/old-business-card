@@ -22,7 +22,7 @@ optional string title:
 optional string phone-no:
 optional string email:
 optional string address:
-optional ftd.image-src logo: $business-card.default-card-logo
+optional ftd.image-src logo: $assets.files.assets.ipsum-logo.svg
 optional ftd.image-src avatar:
 optional string github:
 
@@ -39,7 +39,7 @@ site-title: $home.package-name
 role: $inherited.types.heading-medium
 color: $inherited.colors.text-strong
 
--- home.c.card: $home.name
+-- home.c.front: $home.name
 title: $home.title
 phone-no: $home.phone-no
 email: $home.email
@@ -55,7 +55,7 @@ role: $inherited.types.heading-medium
 margin-top.px: 10
 color: $inherited.colors.text-strong
 
--- home.c.card-back: $home.name
+-- home.c.back: $home.name
 title: $home.title
 phone-no: $home.phone-no
 email: $home.email
@@ -79,7 +79,7 @@ not passed, then it will use the default definitions from the default module.
 -- cb.code: Card signature
 lang: ftd
 
-\-- component card:
+\-- component front:
 caption name:
 optional string company-name:
 optional string title:
@@ -98,7 +98,7 @@ optional ftd.image-src qr-code:
 -- cb.code: Card-back signature
 lang: ftd
 
-\-- component card-back:
+\-- component back:
 caption name:
 optional string company-name:
 optional string title:
@@ -112,7 +112,7 @@ optional ftd.image-src qr-code:
 
 \;; <YOUR CARD-BACK IMPLEMENTATION HERE>
 
-\-- end: card-back
+\-- end: back
 
 -- end: site-doc.doc-home
 
@@ -140,7 +140,7 @@ optional string title:
 optional string phone-no:
 optional string email:
 optional string address:
-optional ftd.image-src logo: $business-card.default-card-logo
+optional ftd.image-src logo: $assets.files.assets.ipsum-logo.svg
 optional ftd.image-src avatar:
 optional string github:
 
@@ -155,7 +155,7 @@ This will be how-to-use page
 
 -- tf.h1: This is card
 
--- how-to-use.c.card: $how-to-use.name
+-- how-to-use.c.front: $how-to-use.name
 title: $how-to-use.title
 phone-no: $how-to-use.phone-no
 email: $how-to-use.email
@@ -192,7 +192,7 @@ optional string title:
 optional string phone-no:
 optional string email:
 optional string address:
-optional ftd.image-src logo: $business-card.default-card-logo
+optional ftd.image-src logo: $assets.files.assets.ipsum-logo.svg
 optional ftd.image-src avatar:
 optional string github:
 optional string website:
@@ -207,7 +207,7 @@ site-title: $home-card.package-name
 
 -- tf.h1: Card Front
 
--- home-card.c.card: $home-card.name
+-- home-card.c.front: $home-card.name
 title: $home-card.title
 phone-no: $home-card.phone-no
 email: $home-card.email
@@ -221,7 +221,7 @@ website: $home-card.website
 
 -- tf.h1: Card Back
 
--- home-card.c.card-back: $home-card.name
+-- home-card.c.back: $home-card.name
 title: $home-card.title
 phone-no: $home-card.phone-no
 email: $home-card.email
@@ -266,13 +266,13 @@ optional string title:
 optional string phone-no:
 optional string email:
 optional string address:
-optional ftd.image-src logo: $business-card.default-card-logo
+optional ftd.image-src logo: $assets.files.assets.ipsum-logo.svg
 optional ftd.image-src avatar:
 optional string github:
 optional string website:
 string sample-code:
 
--- site-doc.doc-home: Documentation - Card
+-- site-doc.doc-home: Documentation - Card Front
 site-title: $how-to-use-card.package-name
 show-tabs: false
 license-url if { how-to-use-card.license-url != NULL }: $how-to-use-card.license-url
@@ -295,7 +295,7 @@ $how-to-use-card.sample-code
 
 -- site-doc.header: Preview
 
--- how-to-use-card.c.card: $how-to-use-card.name
+-- how-to-use-card.c.front: $how-to-use-card.name
 title: $how-to-use-card.title
 phone-no: $how-to-use-card.phone-no
 email: $how-to-use-card.email
@@ -392,7 +392,7 @@ optional string title:
 optional string phone-no:
 optional string email:
 optional string address:
-optional ftd.image-src logo: $business-card.default-card-logo
+optional ftd.image-src logo: $assets.files.assets.ipsum-logo.svg
 optional ftd.image-src avatar:
 optional string github:
 optional string website:
@@ -421,7 +421,7 @@ $how-to-use-card-back.sample-code
 
 -- site-doc.header: Preview
 
--- how-to-use-card-back.c.card-back: $how-to-use-card-back.name
+-- how-to-use-card-back.c.back: $how-to-use-card-back.name
 title: $how-to-use-card-back.title
 phone-no: $how-to-use-card-back.phone-no
 email: $how-to-use-card-back.email
