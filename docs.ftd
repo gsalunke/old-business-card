@@ -79,7 +79,7 @@ not passed, then it will use the default definitions from the default module.
 -- cb.code: Card signature
 lang: ftd
 
-\-- component front:
+\-- component card:
 caption name:
 optional string company-name:
 optional string title:
@@ -98,7 +98,7 @@ optional ftd.image-src qr-code:
 -- cb.code: Card-back signature
 lang: ftd
 
-\-- component back:
+\-- component card-back:
 caption name:
 optional string company-name:
 optional string title:
@@ -112,7 +112,7 @@ optional ftd.image-src qr-code:
 
 \;; <YOUR CARD-BACK IMPLEMENTATION HERE>
 
-\-- end: back
+\-- end: card-back
 
 -- end: site-doc.doc-home
 
@@ -272,7 +272,7 @@ optional string github:
 optional string website:
 string sample-code:
 
--- site-doc.doc-home: Documentation - Card Front
+-- site-doc.doc-home: Documentation - Card
 site-title: $how-to-use-card.package-name
 show-tabs: false
 license-url if { how-to-use-card.license-url != NULL }: $how-to-use-card.license-url
