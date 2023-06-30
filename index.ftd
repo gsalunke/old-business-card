@@ -13,7 +13,7 @@ github: https://github.com/fastn-community/business-card
 
 ;; ----------------------- VARIABLES ----------------------------------
 
--- string default-card-sample-code:
+-- string front-sample-code:
 
 \-- import: fastn-community.github.io/business-card
 
@@ -23,7 +23,7 @@ email: john@xyz.com
 address: 123 Anywhere, Any City
 logo: $assets.files.assets.ipsum-logo.svg
 
--- string default-card-back-sample-code:
+-- string back-sample-code:
 
 \-- import: fastn-community.github.io/business-card
 
