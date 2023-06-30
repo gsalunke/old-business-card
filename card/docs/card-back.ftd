@@ -2,5 +2,5 @@
 -- import: fastn-community.github.io/business-card/docs
 
 -- docs.how-to-use-card-back:
-github: fastn-community.github.io/business-card
+github: https://github.com/fastn-community/business-card
 sample-code: $business-card.default-back-sample-code
