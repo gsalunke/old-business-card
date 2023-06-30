@@ -15,27 +15,22 @@ github: https://github.com/fastn-community/business-card
 
 -- string default-card-sample-code:
 
-\-- import: fastn-community.github.io/business-card as b
+\-- import: fastn-community.github.io/business-card
 
-\-- ftd.image-src default-card-logo: $assets.files.assets.ipsum-logo.svg
-
-\-- b.card: John Doe
+\-- business-card.front: John Doe
 title: Software Developer
 email: john@xyz.com
 address: 123 Anywhere, Any City
-logo: $default-card-logo
+logo: $assets.files.assets.ipsum-logo.svg
 
 -- string default-card-back-sample-code:
 
-\-- import: fastn-community.github.io/business-card as b
+\-- import: fastn-community.github.io/business-card
 
-\-- ftd.image-src default-card-logo: $assets.files.assets.ipsum-logo.svg
-
-\-- b.card-back: 
-logo: $default-card-logo
+\-- business-card.back: 
+logo: $assets.files.assets.ipsum-logo.svg
 company-slogan: If you can type you can code
 
--- ftd.image-src default-card-logo: $assets.files.assets.ipsum-logo.svg
 
 -- ftd.color card-background-color:
 light: #f4edd0
@@ -43,7 +38,7 @@ dark: black
 
 ;; ---------------------- DEFAULT CARD COMPONENTS -------------------------
 
--- component card:
+-- component front:
 caption name:
 optional string company-name:
 optional string title:
@@ -68,8 +63,8 @@ height: fill-container
 align-content: center
 spacing: space-around
 
--- ftd.image: $card.logo
-if: { card.logo != NULL }
+-- ftd.image: $front.logo
+if: { front.logo != NULL }
 width.fixed.px: 250
 
 -- end: ftd.column
@@ -81,30 +76,30 @@ align-content: center
 border-left-width.px: 2
 border-color: $inherited.colors.border-strong
 
--- ftd.text: $card.name
+-- ftd.text: $front.name
 color: $inherited.colors.text-strong
 role: $inherited.types.heading-small
 
--- ftd.text: $card.title
-if: { card.title != NULL }
+-- ftd.text: $front.title
+if: { front.title != NULL }
 color: $inherited.colors.text
 role: $inherited.types.copy-regular
 
--- ftd.text: $card.phone-no
-if: { card.phone-no != NULL }
+-- ftd.text: $front.phone-no
+if: { front.phone-no != NULL }
 margin-top.px: 50
 color: $inherited.colors.text
 role: $inherited.types.copy-regular
 
--- ftd.text: $card.email
-if: { card.email != NULL }
-margin-top.px if { card.phone-no == NULL }: 50
+-- ftd.text: $front.email
+if: { front.email != NULL }
+margin-top.px if { front.phone-no == NULL }: 50
 color: $inherited.colors.text
 role: $inherited.types.copy-regular
 
--- ftd.text: $card.address
-if: { card.address != NULL }
-margin-top.px if { card.phone-no == NULL && card.email == NULL }: 50
+-- ftd.text: $front.address
+if: { front.address != NULL }
+margin-top.px if { front.phone-no == NULL && front.email == NULL }: 50
 color: $inherited.colors.text
 role: $inherited.types.copy-regular
 
@@ -112,7 +107,7 @@ role: $inherited.types.copy-regular
 
 -- end: ftd.row
 
--- end: card
+-- end: front
 
 
 
@@ -123,7 +118,7 @@ role: $inherited.types.copy-regular
 
 
 
--- component card-back:
+-- component back:
 optional caption name:
 optional string company-name:
 optional string title:
@@ -153,12 +148,12 @@ border-style: double
 border-color: $inherited.colors.border-strong
 align-content: center
 
--- ftd.image: $card-back.logo
-if: { card-back.logo != NULL }
+-- ftd.image: $back.logo
+if: { back.logo != NULL }
 width.fixed.px: 250
 
--- ftd.text: $card-back.company-slogan
-if: { card-back.company-slogan != NULL }
+-- ftd.text: $back.company-slogan
+if: { back.company-slogan != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text-strong
 width: fill-container
@@ -168,4 +163,4 @@ text-align: center
 
 -- end: ftd.row
 
--- end: card-back
+-- end: back
