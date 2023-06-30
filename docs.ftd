@@ -195,6 +195,7 @@ optional string address:
 optional ftd.image-src logo: $business-card.default-card-logo
 optional ftd.image-src avatar:
 optional string github:
+optional string website:
 
 -- site-doc.doc-home: $concat2(a = fastn-package:, b = $home-card.package-name)
 license-url if { home-card.license-url != NULL }: $home-card.license-url
@@ -216,6 +217,7 @@ company-name: $home-card.company-name
 avatar: $home-card.avatar
 company-slogan: $home-card.company-slogan
 qr-code: $home-card.qr-code
+website: $home-card.website
 
 -- ds.h1: Card Back
 
@@ -229,6 +231,7 @@ company-name: $home-card.company-name
 avatar: $home-card.avatar
 company-slogan: $home-card.company-slogan
 qr-code: $home-card.qr-code
+website: $home-card.website
 
 -- end: site-doc.output
 
@@ -266,6 +269,7 @@ optional string address:
 optional ftd.image-src logo: $business-card.default-card-logo
 optional ftd.image-src avatar:
 optional string github:
+optional string website:
 string sample-code:
 
 -- site-doc.doc-home: Documentation - Card
@@ -301,6 +305,7 @@ company-name: $how-to-use-card.company-name
 avatar: $how-to-use-card.avatar
 company-slogan: $how-to-use-card.company-slogan
 qr-code: $how-to-use-card.qr-code
+website: $how-to-use-card.website
 
 -- site-doc.header: Card signature
 
@@ -321,6 +326,7 @@ optional ftd.image-src logo:
 optional ftd.image-src avatar:
 optional string company-slogan:
 optional ftd.image-src qr-code:
+optional string website:
 
 \;; <IMPLEMENTATION OMIITED>
 
@@ -409,6 +415,7 @@ optional string address:
 optional ftd.image-src logo: $business-card.default-card-logo
 optional ftd.image-src avatar:
 optional string github:
+optional string website:
 string sample-code:
 
 -- site-doc.doc-home: Documentation - Card Back
@@ -444,6 +451,7 @@ company-name: $how-to-use-card-back.company-name
 avatar: $how-to-use-card-back.avatar
 company-slogan: $how-to-use-card-back.company-slogan
 qr-code: $how-to-use-card-back.qr-code
+website: $how-to-use-card-back.website
 
 -- site-doc.header: Card-Back signature
 
@@ -464,6 +472,7 @@ optional ftd.image-src logo:
 optional ftd.image-src avatar:
 optional string company-slogan:
 optional ftd.image-src qr-code:
+optional string website:
 
 \;; <IMPLEMENTATION OMIITED>
 
