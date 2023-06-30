@@ -6,5 +6,5 @@ title: Software Developer
 phone-no: +123-4567890
 email: john@xyz.com
 address: 123 Anywhere, Any City
-github: fastn-community.github.io/business-card
+github: https://github.com/fastn-community/business-card
 sample-code: $business-card.default-card-sample-code
