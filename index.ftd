@@ -15,30 +15,35 @@ github: https://github.com/fastn-community/business-card
 
 -- string default-card-sample-code:
 
-\-- import: fastn-community.github.io/business-card
+\-- import: fastn-community.github.io/business-card as b
 
-\-- business-card.front: John Doe
+\-- ftd.image-src default-card-logo: $assets.files.assets.ipsum-logo.svg
+
+\-- b.card: John Doe
 title: Software Developer
 email: john@xyz.com
 address: 123 Anywhere, Any City
-logo: $assets.files.assets.ipsum-logo.svg
+logo: $default-card-logo
 
--- string default-back-sample-code:
+-- string default-card-back-sample-code:
 
-\-- import: fastn-community.github.io/business-card
+\-- import: fastn-community.github.io/business-card as b
 
-\-- business-card.back: 
-logo: $assets.files.assets.ipsum-logo.svg
+\-- ftd.image-src default-card-logo: $assets.files.assets.ipsum-logo.svg
+
+\-- b.card-back: 
+logo: $default-card-logo
 company-slogan: If you can type you can code
 
+-- ftd.image-src default-card-logo: $assets.files.assets.ipsum-logo.svg
 
--- ftd.color background-color:
+-- ftd.color card-background-color:
 light: #f4edd0
 dark: black
 
 ;; ---------------------- DEFAULT CARD COMPONENTS -------------------------
 
--- component front:
+-- component card:
 caption name:
 optional string company-name:
 optional string title:
@@ -54,7 +59,7 @@ optional string website:
 -- ftd.row:
 width.fixed.px: 700
 height.fixed.px: 350
-background.solid: $background-color
+background.solid: $card-background-color
 spacing: space-around
 
 -- ftd.column:
@@ -63,8 +68,8 @@ height: fill-container
 align-content: center
 spacing: space-around
 
--- ftd.image: $front.logo
-if: { front.logo != NULL }
+-- ftd.image: $card.logo
+if: { card.logo != NULL }
 width.fixed.px: 250
 
 -- end: ftd.column
@@ -76,30 +81,30 @@ align-content: center
 border-left-width.px: 2
 border-color: $inherited.colors.border-strong
 
--- ftd.text: $front.name
+-- ftd.text: $card.name
 color: $inherited.colors.text-strong
 role: $inherited.types.heading-small
 
--- ftd.text: $front.title
-if: { front.title != NULL }
+-- ftd.text: $card.title
+if: { card.title != NULL }
 color: $inherited.colors.text
 role: $inherited.types.copy-regular
 
--- ftd.text: $front.phone-no
-if: { front.phone-no != NULL }
+-- ftd.text: $card.phone-no
+if: { card.phone-no != NULL }
 margin-top.px: 50
 color: $inherited.colors.text
 role: $inherited.types.copy-regular
 
--- ftd.text: $front.email
-if: { front.email != NULL }
-margin-top.px if { front.phone-no == NULL }: 50
+-- ftd.text: $card.email
+if: { card.email != NULL }
+margin-top.px if { card.phone-no == NULL }: 50
 color: $inherited.colors.text
 role: $inherited.types.copy-regular
 
--- ftd.text: $front.address
-if: { front.address != NULL }
-margin-top.px if { front.phone-no == NULL && front.email == NULL }: 50
+-- ftd.text: $card.address
+if: { card.address != NULL }
+margin-top.px if { card.phone-no == NULL && card.email == NULL }: 50
 color: $inherited.colors.text
 role: $inherited.types.copy-regular
 
@@ -107,7 +112,7 @@ role: $inherited.types.copy-regular
 
 -- end: ftd.row
 
--- end: front
+-- end: card
 
 
 
@@ -118,7 +123,7 @@ role: $inherited.types.copy-regular
 
 
 
--- component back:
+-- component card-back:
 optional caption name:
 optional string company-name:
 optional string title:
@@ -134,7 +139,7 @@ optional string website:
 -- ftd.row:
 width.fixed.px: 700
 height.fixed.px: 350
-background.solid: $background-color
+background.solid: $card-background-color
 spacing: space-around
 align-content: center
 
@@ -148,12 +153,12 @@ border-style: double
 border-color: $inherited.colors.border-strong
 align-content: center
 
--- ftd.image: $back.logo
-if: { back.logo != NULL }
+-- ftd.image: $card-back.logo
+if: { card-back.logo != NULL }
 width.fixed.px: 250
 
--- ftd.text: $back.company-slogan
-if: { back.company-slogan != NULL }
+-- ftd.text: $card-back.company-slogan
+if: { card-back.company-slogan != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text-strong
 width: fill-container
@@ -163,5 +168,4 @@ text-align: center
 
 -- end: ftd.row
 
--- end: back
-
+-- end: card-back
