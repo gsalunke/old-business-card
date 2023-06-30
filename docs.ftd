@@ -16,7 +16,7 @@ string deployed-url: fastn-community.github.io/business-card
 optional string license-url:
 module c: business-card
 optional string company-name:
-optional string company-slogan:
+optional string company-slogan: If you can type you can code
 optional ftd.image-src qr-code:
 optional string title:
 optional string phone-no:
