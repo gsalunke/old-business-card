@@ -7,4 +7,4 @@ phone-no: +123-4567890
 email: john@xyz.com
 address: 123 Anywhere, Any City
 github: https://github.com/fastn-community/business-card
-sample-code: $business-card.default-card-sample-code
+sample-code: $business-card.front-sample-code

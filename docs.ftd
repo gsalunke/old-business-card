@@ -278,8 +278,8 @@ show-tabs: false
 license-url if { how-to-use-card.license-url != NULL }: $how-to-use-card.license-url
 current-package: $how-to-use-card.package-full-name
 
-This is a card component which will render your data
-as a business card (front-view).
+This is a card component which will render your data as a business card
+(front-view).
 
 -- site-doc.header: How to use
 
