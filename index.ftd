@@ -31,11 +31,12 @@ logo: $assets.files.assets.ipsum-logo.svg
 logo: $assets.files.assets.ipsum-logo.svg
 company-slogan: If you can type you can code
 
--- string user-name: fastn
 
 -- ftd.color card-background-color:
 light: #f4edd0
 dark: black
+
+-- string user-name: fastn
 
 ;; ---------------------- DEFAULT CARD COMPONENTS -------------------------
 
