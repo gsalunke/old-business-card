@@ -29,7 +29,7 @@ optional string github:
 
 -- site-doc.doc-home: $concat2(a = fastn-package:, b = $home.package-name)
 license-url if { home.license-url != NULL }: $home.license-url
-current-package: $home.github
+current-package: $home.deployed-url
 show-tabs: false
 site-title: $home.package-name
 
@@ -147,7 +147,7 @@ optional string github:
 
 -- site-doc.doc-home: $concat2(a = fastn-package:, b = $how-to-use.package-name)
 license-url if { how-to-use.license-url != NULL }: $how-to-use.license-url
-current-package: $how-to-use.github
+current-package: $how-to-use.deployed-url
 show-tabs: false
 site-title: $how-to-use.package-name
 
@@ -199,7 +199,7 @@ optional string website:
 
 -- site-doc.doc-home: $concat2(a = fastn-package:, b = $home-card.package-name)
 license-url if { home-card.license-url != NULL }: $home-card.license-url
-current-package: $home-card.github
+current-package: $home-card.package-full-name
 show-tabs: false
 site-title: $home-card.package-name
 
