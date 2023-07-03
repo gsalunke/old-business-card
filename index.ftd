@@ -36,8 +36,6 @@ company-slogan: If you can type you can code
 light: #f4edd0
 dark: black
 
--- string user-name: John Doe
-
 ;; ---------------------- DEFAULT CARD COMPONENTS -------------------------
 
 -- component front:
