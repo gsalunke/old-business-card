@@ -1,11 +1,16 @@
 -- import: fastn-community.github.io/business-card/docs
 -- import: fastn-community.github.io/business-card
 
+
+
+
+
 -- docs.home: John Doe
 title: Software Developer
+phone-no: +123-4567890
 email: john@xyz.com
 address: 123 Anywhere, Any City
-deployed-url: fastn-community.github.io/business-card
+github: https://github.com/fastn-community/business-card
 
 
 
