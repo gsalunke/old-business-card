@@ -18,9 +18,7 @@ favicon: /-/fastn-community.github.io/business-card/favicon.ico
 # Home: index.html
 
 - Overview: index.html
-
-- How to Use: /how-to-use/
-  skip: true
+- Make your business card: /how-to-use/
 
 # Card: /card/
 
