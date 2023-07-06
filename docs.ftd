@@ -165,6 +165,13 @@ Additionally, business cards may feature a company logo, website URL, social
 media handles, and a brief description of the individual's or company's
 offerings, company slogan etc.
 
+-- site-doc.header: How to use
+
+-- cb.code: Add dependency into your FASTN.ftd
+lang: ftd
+
+\-- fastn.dependency: fastn-community.github.io/business-card
+
 -- site-doc.header: Business Card - front
 
 -- home.c.front: $home.name
@@ -176,6 +183,18 @@ logo: $home.logo
 company-slogan: $home.company-slogan
 qr-code: $home.qr-code
 
+-- cb.code: Import `business-card` into your `.ftd` file
+lang: ftd
+
+\-- import: fastn-community.github.io/business-card
+
+\-- business-card.ftont:  John Doe
+title: Software Developer
+phone-no: +123-4567890
+email: john@xyz.com
+address: 123 Anywhere, Any City
+logo: $assets.files.assets.ipsum-logo.svg
+
 -- site-doc.header: Business Card - back
 
 -- home.c.back: $home.name
@@ -186,6 +205,15 @@ address: $home.address
 logo: $home.logo
 company-slogan: $home.company-slogan
 qr-code: $home.qr-code
+
+-- cb.code: Import `business-card` into your `.ftd` file
+lang: ftd
+
+\-- import: fastn-community.github.io/business-card
+
+\-- business-card.back: 
+logo: $assets.files.assets.ipsum-logo.svg
+company-slogan: If you can type you can code
 
 -- end: site-doc.doc-home
 
