@@ -34,8 +34,6 @@ logo: $assets.files.assets.ipsum-logo.svg
 company-slogan: If you can type you can code
 website: www.johndoe.com
 
-
-
 -- site-doc.header: How to use
 
 - **Add dependency into your FASTN.ftd**
@@ -114,8 +112,6 @@ $on-mouse-enter$: $ftd.set-bool($a = $details.open, v = true)
 if: { !details.open }
 width: fill-container
 height: fill-container
-;;$on-mouse-enter$: $ftd.set-bool($a = $details.open, v = true)
-;;$on-mouse-leave$: $ftd.set-bool($a = $details.open, v = false)
 
 -- front: $details.name
 company-name: $details.company-name
@@ -133,6 +129,7 @@ website: $details.website
 
 -- ftd.column:
 if: { details.open }
+width: fill-container
 height: fill-container
 $on-mouse-leave$: $ftd.set-bool($a = $details.open, v = false)
 
@@ -175,6 +172,10 @@ optional ftd.image-src avatar:
 optional string company-slogan:
 optional ftd.image-src qr-code:
 optional string website:
+
+-- ftd.column:
+
+-- ftd.desktop:
 
 -- ftd.row:
 width.fixed.px: 700
@@ -270,6 +271,107 @@ text-align: center
 
 -- end: ftd.row
 
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- ftd.column:
+width: fill-container
+height.fixed.px: 470
+background.solid: $card-background-color
+spacing: space-around
+
+-- ftd.image:
+if: { front.qr-code != NULL }
+src: $front.qr-code
+width.fixed.px: 64
+height.fixed.px: 64
+anchor: parent
+right.px: 12
+top.px: 12
+z-index: 2
+
+-- ftd.column:
+width: fill-container
+align-content: center
+padding-vertical.px: 24
+
+-- ftd.image: $front.logo
+if: { front.logo != NULL }
+width.fixed.px: 250
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+align-content: center
+border-top-width.px: 2
+border-color: $inherited.colors.border-strong
+padding-horizontal.px: 24
+spacing.fixed.px: 8
+
+-- ftd.text: $front.name
+color: $inherited.colors.text-strong
+role: $inherited.types.heading-small
+
+-- ftd.text: $front.title
+if: { front.title != NULL }
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- ftd.text: $front.phone-no
+if: { front.phone-no != NULL }
+margin-top.px: 40
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- ftd.text: $front.email
+if: { front.email != NULL }
+margin-top.px if { front.phone-no == NULL }: 50
+color: $inherited.colors.text
+role: $inherited.types.fine-print
+
+-- ftd.column:
+width: fill-container
+border-top-width.px: 1
+border-color: $inherited.colors.border-strong
+align-content: center
+padding-top.px: 8
+margin-top.px: 8
+spacing.fixed.px: 8
+
+-- ftd.text: $front.company-name
+if: { front.address != NULL }
+margin-top.px if { front.phone-no == NULL && front.email == NULL }: 50
+color: $inherited.colors.text
+role: $inherited.types.button-medium
+text-align: center
+
+-- ftd.text: $front.address
+if: { front.address != NULL }
+margin-top.px if { front.phone-no == NULL && front.email == NULL }: 50
+color: $inherited.colors.text
+role: $inherited.types.fine-print
+text-align: center
+
+-- ftd.text: $front.website
+if: { front.address != NULL }
+margin-top.px if { front.phone-no == NULL && front.email == NULL }: 50
+color: $inherited.colors.text
+role: $inherited.types.fine-print
+text-align: center
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
 -- end: front
 
 
@@ -293,6 +395,10 @@ optional ftd.image-src avatar:
 optional string company-slogan:
 optional ftd.image-src qr-code:
 optional string website:
+
+-- ftd.column:
+
+-- ftd.desktop:
 
 -- ftd.row:
 width.fixed.px: 700
@@ -326,5 +432,40 @@ margin-top.px: 16
 -- end: ftd.column
 
 -- end: ftd.row
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- ftd.column:
+width: fill-container
+height.fixed.px: 470
+background.solid: $card-background-color
+min-width.fixed.px: 342
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+align-content: center
+
+-- ftd.image: $back.logo
+if: { back.logo != NULL }
+width.fixed.px: 250
+
+-- ftd.text: $back.company-slogan
+if: { back.company-slogan != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
+width: fill-container
+text-align: center
+margin-top.px: 16
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.mobile
+
+-- end: ftd.column
 
 -- end: back
