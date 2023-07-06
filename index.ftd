@@ -5,17 +5,62 @@
 
 
 
--- docs.home: John Doe
+-- site-doc.doc-home: Business Card
+license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
+current-package: fastn-community.github.io/business-card
+show-tabs: false
+site-title: Business Card
+
+Business card typically include essential information such as the person's or
+company's name, job title, phone number, email address, and physical address.
+
+Additionally, business cards may feature a company logo, website URL, social
+media handles, and a brief description of the individual's or company's
+offerings, company slogan etc.
+
+-- site-doc.output:
+
+-- business-card.details: John Doe
+company-name: John Doe Pvt. Ltd.
 title: Software Developer
-phone-no: +123-4567890
-email: john@xyz.com
-address: 123 Anywhere, Any City
-github: https://github.com/fastn-community/business-card
+phone-no: +91 12345 99999
+email: john@johndoe.com
+address: 123, Block No. A-123, Times Sqaure, Bangalore - 123456
+logo: $assets.files.assets.ipsum-logo.svg
 company-slogan: If you can type you can code
+website: www.johndoe.com
 
 
 
+-- site-doc.header: How to use
 
+- **Add dependency into your FASTN.ftd**
+
+-- cb.code: 
+lang: ftd
+
+\-- fastn.dependency: fastn-community.github.io/business-card
+
+-- tf.markdown:
+
+- **Import `business-card` into your `.ftd` file**
+
+-- cb.code:
+lang: ftd
+
+\-- import: fastn-community.github.io/business-card
+
+\-- business-card.details: John Doe
+company-name: John Doe Pvt. Ltd.
+title: Software Developer
+phone-no: +91 12345 99999
+email: john@johndoe.com
+address: 123, Block No. A-123, Times Sqaure, Bangalore - 123456
+logo: $assets.files.assets.ipsum-logo.svg
+company-slogan: If you can type you can code
+website: www.johndoe.com
+
+-- end: site-doc.doc-home
 
 ;; ----------------------- VARIABLES ----------------------------------
 
@@ -44,6 +89,76 @@ dark: black
 
 ;; ---------------------- DEFAULT CARD COMPONENTS -------------------------
 
+-- component details:
+caption name:
+optional string company-name:
+optional string title:
+optional string phone-no:
+optional string email:
+optional string address:
+optional ftd.image-src logo:
+optional ftd.image-src avatar:
+optional string company-slogan:
+optional ftd.image-src qr-code:
+optional string website:
+boolean $open: false
+
+-- ftd.column:
+$on-mouse-enter$: $ftd.set-bool($a = $details.open, v = true)
+
+-- ftd.column:
+if: { !details.open }
+width: fill-container
+height: fill-container
+;;$on-mouse-enter$: $ftd.set-bool($a = $details.open, v = true)
+;;$on-mouse-leave$: $ftd.set-bool($a = $details.open, v = false)
+
+-- front: $details.name
+company-name: $details.company-name
+title: $details.title
+phone-no: $details.phone-no
+email: $details.email
+address: $details.address
+logo: $details.logo
+avatar: $details.avatar
+company-slogan: $details.company-slogan
+qr-code: $details.qr-code
+website: $details.website
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { details.open }
+height: fill-container
+$on-mouse-leave$: $ftd.set-bool($a = $details.open, v = false)
+
+-- back: $details.name
+company-name: $details.company-name
+title: $details.title
+phone-no: $details.phone-no
+email: $details.email
+address: $details.address
+logo: $details.logo
+avatar: $details.avatar
+company-slogan: $details.company-slogan
+qr-code: $details.qr-code
+website: $details.website
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: details
+
+
+
+
+
+
+
+
+
+
 -- component front:
 caption name:
 optional string company-name:
@@ -63,6 +178,16 @@ height.fixed.px: 350
 background.solid: $card-background-color
 spacing: space-around
 
+-- ftd.image:
+if: { front.qr-code != NULL }
+src: $front.qr-code
+width.fixed.px: 64
+height.fixed.px: 64
+anchor: parent
+right.px: 12
+top.px: 12
+z-index: 2
+
 -- ftd.column:
 width.fixed.percent: 50
 height: fill-container
@@ -81,6 +206,8 @@ height: fill-container
 align-content: center
 border-left-width.px: 2
 border-color: $inherited.colors.border-strong
+padding-horizontal.px: 24
+spacing.fixed.px: 8
 
 -- ftd.text: $front.name
 color: $inherited.colors.text-strong
@@ -93,7 +220,7 @@ role: $inherited.types.copy-regular
 
 -- ftd.text: $front.phone-no
 if: { front.phone-no != NULL }
-margin-top.px: 50
+margin-top.px: 40
 color: $inherited.colors.text
 role: $inherited.types.copy-regular
 
@@ -101,13 +228,39 @@ role: $inherited.types.copy-regular
 if: { front.email != NULL }
 margin-top.px if { front.phone-no == NULL }: 50
 color: $inherited.colors.text
-role: $inherited.types.copy-regular
+role: $inherited.types.fine-print
+
+-- ftd.column:
+width: fill-container
+border-top-width.px: 1
+border-color: $inherited.colors.border-strong
+align-content: center
+padding-top.px: 8
+margin-top.px: 8
+spacing.fixed.px: 8
+
+-- ftd.text: $front.company-name
+if: { front.address != NULL }
+margin-top.px if { front.phone-no == NULL && front.email == NULL }: 50
+color: $inherited.colors.text
+role: $inherited.types.button-medium
+text-align: center
 
 -- ftd.text: $front.address
 if: { front.address != NULL }
 margin-top.px if { front.phone-no == NULL && front.email == NULL }: 50
 color: $inherited.colors.text
-role: $inherited.types.copy-regular
+role: $inherited.types.fine-print
+text-align: center
+
+-- ftd.text: $front.website
+if: { front.address != NULL }
+margin-top.px if { front.phone-no == NULL && front.email == NULL }: 50
+color: $inherited.colors.text
+role: $inherited.types.fine-print
+text-align: center
+
+-- end: ftd.column
 
 -- end: ftd.column
 
