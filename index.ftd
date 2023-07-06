@@ -11,6 +11,7 @@ phone-no: +123-4567890
 email: john@xyz.com
 address: 123 Anywhere, Any City
 github: https://github.com/fastn-community/business-card
+company-slogan: If you can type you can code
 
 
 
@@ -163,6 +164,7 @@ role: $inherited.types.copy-regular
 color: $inherited.colors.text-strong
 width: fill-container
 text-align: center
+margin-top.px: 16
 
 -- end: ftd.column
 
