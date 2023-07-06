@@ -20,6 +20,10 @@ offerings, company slogan etc.
 
 -- site-doc.output:
 
+-- site-doc.header: Demo
+
+Mouse over on below business-card to see backside of it.
+
 -- business-card.details: John Doe
 company-name: John Doe Pvt. Ltd.
 title: Software Developer
