@@ -7,6 +7,8 @@ favicon: /-/fastn-community.github.io/business-card/favicon.ico
 -- fastn.dependency: fastn-community.github.io/site-doc
 -- fastn.dependency: fastn-community.github.io/typography as tf
 -- fastn.dependency: fastn-community.github.io/code-block as cb
+-- fastn.dependency: fastn-community.github.io/bling
+
 
 -- fastn.auto-import: fastn-community.github.io/business-card/assets
 -- fastn.auto-import: fastn-community.github.io/site-doc
