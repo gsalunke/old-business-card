@@ -1,5 +1,6 @@
 -- import: fastn-community.github.io/business-card/docs
 -- import: fastn-community.github.io/business-card
+-- import: fastn-stack.github.io/fastn-js/utils
 -- import: fastn-community.github.io/bling/note
 
 
@@ -7,11 +8,12 @@
 license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
 current-package: fastn-community.github.io/business-card
 show-tabs: false
-site-title: Business Card
+github-url: https://github.com/fastn-community/business-card
 
 -- tf.markdown:
 
 This guide will demonstrate how to make a simple business card.
+
 
 -- business-card.details: John Doe
 company-name: John Doe Pvt. Ltd.
@@ -262,9 +264,19 @@ optional string company-slogan:
 optional ftd.image-src qr-code:
 optional string website:
 boolean $open: false
+private string card-id: this-card
+boolean $mouse-in: false
+boolean $on-hover: false
+boolean $mouse-over: false
 
 -- ftd.column:
-$on-mouse-enter$: $ftd.set-bool($a = $details.open, v = true)
+
+-- ftd.row:
+spacing.fixed.px: 24
+
+-- ftd.column:
+width: fill-container
+id: $details.card-id
 
 -- ftd.column:
 if: { !details.open }
@@ -289,7 +301,6 @@ website: $details.website
 if: { details.open }
 width: fill-container
 height: fill-container
-$on-mouse-leave$: $ftd.set-bool($a = $details.open, v = false)
 
 -- back: $details.name
 company-name: $details.company-name
@@ -304,6 +315,50 @@ qr-code: $details.qr-code
 website: $details.website
 
 -- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+spacing.fixed.px: 12
+align-content: center
+
+-- ftd.image:
+if: { !details.mouse-in }
+src: $assets.files.assets.flip-icon.svg
+width.fixed.px: 24
+height.fixed.px: 24
+$on-click$: $ftd.toggle($a = $details.open)
+$on-mouse-enter$: $ftd.set-bool($a = $details.mouse-in, v = true)
+
+-- ftd.image:
+if: { details.mouse-in }
+src: $assets.files.assets.flip-icon-hover.svg
+width.fixed.px: 24
+height.fixed.px: 24
+$on-click$: $ftd.toggle($a = $details.open)
+$on-mouse-leave$: $ftd.set-bool($a = $details.mouse-in, v = false)
+
+-- ftd.image:
+if: { details.open }
+src: $assets.files.assets.download.svg
+src if { details.mouse-over }: $assets.files.assets.download-hover.svg
+width.fixed.px: 30
+$on-click$: $utils.download-as-image(element_id = $details.card-id, filename = card-back.jpg)
+$on-mouse-enter$: $ftd.set-bool($a = $details.mouse-over, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $details.mouse-over, v = false)
+
+-- ftd.image:
+if: { !details.open }
+src: $assets.files.assets.download.svg
+src if { details.on-hover }: $assets.files.assets.download-hover.svg
+width.fixed.px: 30
+$on-click$: $utils.download-as-image(element_id = $details.card-id, filename = card-front.jpg)
+$on-mouse-enter$: $ftd.set-bool($a = $details.on-hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $details.on-hover, v = false)
+
+-- end: ftd.column
+
+-- end: ftd.row
 
 -- end: ftd.column
 
