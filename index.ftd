@@ -1,18 +1,17 @@
 -- import: fastn-community.github.io/business-card/docs
 -- import: fastn-community.github.io/business-card
+-- import: fastn-community.github.io/bling/note
 
 
-
-
-
--- site-doc.doc-home: Business Card
+-- site-doc.doc-home: How to build Business Card
 license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
 current-package: fastn-community.github.io/business-card
 show-tabs: false
 site-title: Business Card
 
-Business card typically include essential information such as the person's or
-company's name, job title, phone number, email address, and physical address.
+A business card typically contains an individual’s or a company’s contact
+information, such as their name, job title, company name, address, phone
+number, email address, and website.
 
 Additionally, business cards may feature a company logo, website URL, social
 media handles, and a brief description of the individual's or company's
@@ -20,9 +19,13 @@ offerings, company slogan etc.
 
 -- site-doc.output:
 
--- site-doc.header: Demo
+-- site-doc.header: Template Preview
 
-Mouse over on below business-card to see backside of it.
+We are going to create the following template.
+
+**Estimated Completion Time:** 10 mins
+
+**Note:** Mouse hover on below business-card to see backside of it.
 
 -- business-card.details: John Doe
 company-name: John Doe Pvt. Ltd.
@@ -34,21 +37,72 @@ logo: $assets.files.assets.ipsum-logo.svg
 company-slogan: If you can type you can code
 website: www.johndoe.com
 
--- site-doc.header: How to use
 
-- **Add dependency into your FASTN.ftd**
+-- site-doc.header: Prerequisites
+
+If you are new to the journey of web-development and want to create any fastn
+project, you will need to setup the followings:
+
+- **Install fastn**
+
+	- For [Mac/Linux](https://fastn.com/macos/)
+	- For [Windows](https://fastn.com/windows/)
+
+-- tf.markdown:
+
+- **Download a text editor**
+
+	We recommend you to download `Sublime Text`. [Cick here](https://www.sublimetext.com/3) to download.
+
+-- tf.markdown:
+
+- **Setup a [GitHub](https://fastn.com/book/github/) account**
+
+	Create a `GitHub account` if you do not have one. 
+[Click Here](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
+
+
+
+
+-- site-doc.header: Let's build your business card
+
+- **Step 1: Create a fastn package**
+
+	- Create a folder in your machine
+	- Open the folder through the text editor
+	- Create two documents - `FASTN.ftd` and `index.ftd`
+
+-- tf.markdown:
+
+- **Step 2: Update `FASTN.ftd` document**
+
+You can either copy the below code or you can just download the code as a 
+`FASTN.ftd` document and replace the downloaded document with your `FASTN.ftd` 
+document.
+
+**Note:** Make sure to give name to the package, by replacing <package-name> 
 
 -- cb.code: 
 lang: ftd
+download: FASTN.ftd
+
+\-- import: fastn
+
+\-- fastn.package: <package-name>
 
 \-- fastn.dependency: fastn-community.github.io/business-card
 
 -- tf.markdown:
 
-- **Import `business-card` into your `.ftd` file**
+- **Step 3: Update the `.ftd` document**
+
+You can either copy the below code or you can just download the code as a 
+`index.ftd` document and replace the downloaded document with your `index.ftd` 
+document.
 
 -- cb.code:
 lang: ftd
+download: index.ftd
 
 \-- import: fastn-community.github.io/business-card
 
@@ -61,6 +115,100 @@ address: 123, Block No. A-123, Times Sqaure, Bangalore - 123456
 logo: $assets.files.assets.ipsum-logo.svg
 company-slogan: If you can type you can code
 website: www.johndoe.com
+
+
+-- tf.markdown:
+
+- **Step 4: Personalise the values**
+
+Example: 
+
+-- cb.code: Updated values
+lang: ftd
+
+\-- business-card.details: Ajit Garg	;;<hl>
+company-name: FifthTry Pvt. Ltd.	;;<hl>
+title: DevRel	;;<hl>
+phone-no: +91 12345 99999
+email: ajit@fifthtry.com	;;<hl>
+address: 123, Block No. A-123, Times Sqaure, Bangalore - 123456
+logo: $assets.files.assets.ipsum-logo.svg
+company-slogan: If you can type you can code
+website: www.fastn.com	;;<hl>
+
+
+-- site-doc.header: Let's test it on your machine
+
+Before we host it (by publishing it) on GitHub, let's see the output on 
+browser. 
+
+- Open the Terminal(MacOS) or Command Prompt(Windows)
+- Go the the directory path of your folder
+- Execute the following: `fastn serve`
+- Copy the URL of the local server(eg: http://127.0.0.1:8000) 
+- Paste in any web-browser (eg: Google Chrome)
+
+This will display the business card with your updated values.
+
+**Example:**
+
+-- business-card.details: Ajit Garg
+company-name: FifthTry Pvt. Ltd.
+title: DevRel
+phone-no: +91 12345 99999
+email: ajit@fifthtry.com
+address: 123, Block No. A-123, Times Sqaure, Bangalore - 123456
+logo: $assets.files.assets.ipsum-logo.svg
+company-slogan: If you can type you can code
+website: www.fastn.com
+
+-- tf.markdown:
+
+🎉**Congratulations! You have your personalised business card ready.**
+
+-- site-doc.header: Let's Host it on GitHub
+
+Your business card is in your local machine. Now if you want to share with 
+others or want to use it in your blogs etc., you must host it. One way is to 
+host it (i.e. Publish it) on GitHub.
+
+To host your business card on GitHub, follow the steps mentioned in the 
+following video.
+
+Learn More about [Publish Your Site](https://fastn.com/book/gh-pages/)
+
+- Open the `fastn-template`, [click here](https://github.com/fastn-stack/fastn-template)
+- Click on `Use this template` and select `Create a new repository`
+- Give a Repository name
+- Make sure your repository is `Public`. You can also add some description if 
+  you want, it's *optional*.
+- Click on `Create repository from template`
+- Now wait for some `Initial Commits` that renames the repository to run 
+  successfully. (Allow the count of the Commits to change to 2 with a green 
+  tick and a message will also display Ready to clone and code)
+- Once done, go to `Settings` and from Table of Content, select `Pages`
+- Find the `Branch` ssub-heading under the `Build and deployment` heading, 
+  click on the drop-down and select `gh-pages`
+- Click on Save, this will build and deploy the GitHub pages.
+- To check the workflow, select the tab `Actions` and wait for the latest 
+  `pages build and deployment` to get green tick
+- Go back to `Settings > Pages` to get the live site URL that has generated
+- To add it in your package description, copy the URL and go to first tab 
+  `Code` and on the right side, click on the ⚙(Settings icon) of the `About` 
+  section and click on `Save changes`
+- Copy the code of `index.ftd` document from your text editor and replace the 
+  `index.ftd` document on GitHub and click on `Commit Changes`
+- Once the new `pages build and deployment` workflow executes successfully
+- Now go to `Code` and click on the live site URL from the `About` section
+
+🎉**Congratulations! Your site is live with your business card.**
+
+We would love to see your business card. You can share your work with us on our
+Discord server in the channel 
+[share-your-work](https://discord.com/channels/793929082483769345/1079298758120058940)
+
+
+
 
 -- end: site-doc.doc-home
 
