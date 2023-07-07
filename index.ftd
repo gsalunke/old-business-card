@@ -1,5 +1,6 @@
 -- import: fastn-community.github.io/business-card/docs
 -- import: fastn-community.github.io/business-card
+-- import: fastn-stack.github.io/fastn-js/utils
 -- import: fastn-community.github.io/bling/note
 
 
@@ -7,7 +8,7 @@
 license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
 current-package: fastn-community.github.io/business-card
 show-tabs: false
-site-title: Business Card
+github-url: https://github.com/fastn-community/business-card
 
 Creating a business card using `fastn` is quite easy. You select a template, 
 use that template in your package and change the values to personalise it and 
@@ -282,7 +283,13 @@ boolean $on-hover: false
 boolean $mouse-over: false
 
 -- ftd.column:
-$on-mouse-enter$: $ftd.set-bool($a = $details.open, v = true)
+
+-- ftd.row:
+spacing.fixed.px: 24
+
+-- ftd.column:
+width: fill-container
+id: $details.card-id
 
 -- ftd.column:
 if: { !details.open }
@@ -307,7 +314,6 @@ website: $details.website
 if: { details.open }
 width: fill-container
 height: fill-container
-$on-mouse-leave$: $ftd.set-bool($a = $details.open, v = false)
 
 -- back: $details.name
 company-name: $details.company-name
@@ -328,7 +334,6 @@ website: $details.website
 -- ftd.column:
 spacing.fixed.px: 12
 align-content: center
-
 
 -- ftd.image:
 if: { !details.mouse-in }
