@@ -10,23 +10,10 @@ current-package: fastn-community.github.io/business-card
 show-tabs: false
 github-url: https://github.com/fastn-community/business-card
 
-Creating a business card using `fastn` is quite easy. You select a template, 
-use that template in your package and change the values to personalise it and 
-host it on GitHub to have a site ready with your business card.
+-- tf.markdown:
 
-You can create many such exciting things using `fastn`. To know about fastn - 
-for next billion people. Checkout our website - 
-[Click here](https://fastn.com/).
+This guide will demonstrate how to make a simple business card.
 
--- site-doc.output:
-
-;;-- site-doc.header: Template Preview
-
-;;We are going to create the following template.
-
-;;**Estimated Completion Time:** 10-15 mins
-
-;;**Note:** Mouse hover on below business-card to see backside of it.
 
 -- business-card.details: John Doe
 company-name: John Doe Pvt. Ltd.
