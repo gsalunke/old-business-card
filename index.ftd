@@ -9,13 +9,13 @@ current-package: fastn-community.github.io/business-card
 show-tabs: false
 site-title: Business Card
 
-A business card typically contains an individual’s or a company’s contact
-information, such as their name, job title, company name, address, phone
-number, email address, and website.
+Creating a business card using `fastn` is quite easy. You select a template, 
+use that template in your package and change the values to personalise it and 
+host it on GitHub to have a site ready with your business card.
 
-Additionally, business cards may feature a company logo, website URL, social
-media handles, and a brief description of the individual's or company's
-offerings, company slogan etc.
+You can create many such exciting things using `fastn`. To know about fastn - 
+for next billion people. Checkout our website - 
+[Click here](https://fastn.com/).
 
 -- site-doc.output:
 
@@ -23,7 +23,7 @@ offerings, company slogan etc.
 
 We are going to create the following template.
 
-**Estimated Completion Time:** 10 mins
+**Estimated Completion Time:** 10-15 mins
 
 **Note:** Mouse hover on below business-card to see backside of it.
 
