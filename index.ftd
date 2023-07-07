@@ -9,23 +9,7 @@ current-package: fastn-community.github.io/business-card
 show-tabs: false
 site-title: Business Card
 
-Creating a business card using `fastn` is quite easy. You select a template, 
-use that template in your package and change the values to personalise it and 
-host it on GitHub to have a site ready with your business card.
-
-You can create many such exciting things using `fastn`. To know about fastn - 
-for next billion people. Checkout our website - 
-[Click here](https://fastn.com/).
-
--- site-doc.output:
-
--- site-doc.header: Template Preview
-
-We are going to create the following template.
-
-**Estimated Completion Time:** 10-15 mins
-
-**Note:** Mouse hover on below business-card to see backside of it.
+This guide will demonstrate how to make a simple business card.
 
 -- business-card.details: John Doe
 company-name: John Doe Pvt. Ltd.
@@ -37,6 +21,23 @@ logo: $assets.files.assets.ipsum-logo.svg
 company-slogan: If you can type you can code
 website: www.johndoe.com
 
+-- tf.markdown:
+
+Creating a business card using `fastn` is quite easy. You select a template, 
+use that template in your package and change the values to personalise it and 
+publish it on GitHub to have a site ready with your business card.
+
+You can create many such exciting things using `fastn`. To know about fastn - 
+for next billion people. Checkout our website - 
+[Click here](https://fastn.com/).
+
+-- tf.markdown:
+
+**Estimated Completion Time:** 10-15 mins
+
+
+
+-- site-doc.output:
 
 -- site-doc.header: Prerequisites
 
@@ -66,21 +67,17 @@ project, you will need to setup the followings:
 
 -- site-doc.header: Let's build your business card
 
-- **Step 1: Create a fastn package**
+- **Step 1: Create a folder**
 
-	- Create a folder in your machine
-	- Open the folder through the text editor
-	- Create two documents - `FASTN.ftd` and `index.ftd`
+	Create a folder on your computer. You can create the folder on `Desktop` 
+	or in any drive (eg: D drive, etc.)
+
 
 -- tf.markdown:
 
-- **Step 2: Update `FASTN.ftd` document**
+- **Step 2: Download the `FASTN.ftd` document**
 
-You can either copy the below code or you can just download the code as a 
-`FASTN.ftd` document and replace the downloaded document with your `FASTN.ftd` 
-document.
-
-**Note:** Make sure to give name to the package, by replacing <package-name> 
+Download the following code as a `FASTN.ftd` document using the download icon. 
 
 -- cb.code: 
 lang: ftd
@@ -88,17 +85,15 @@ download: FASTN.ftd
 
 \-- import: fastn
 
-\-- fastn.package: <package-name>
+\-- fastn.package: business-card
 
 \-- fastn.dependency: fastn-community.github.io/business-card
 
 -- tf.markdown:
 
-- **Step 3: Update the `.ftd` document**
+- **Step 3: Download the `.ftd` document**
 
-You can either copy the below code or you can just download the code as a 
-`index.ftd` document and replace the downloaded document with your `index.ftd` 
-document.
+Download the following code as a `index.ftd` document using the download icon.
 
 -- cb.code:
 lang: ftd
@@ -119,11 +114,14 @@ website: www.johndoe.com
 
 -- tf.markdown:
 
-- **Step 4: Personalise the values**
+- **Step 4: Customise your business card**
+
+Replace `John Doe` with your name, replace value of `company-name:` with your 
+company name. Likewise, do for all others.
 
 Example: 
 
--- cb.code: Updated values
+-- cb.code: Update your details on business card
 lang: ftd
 
 \-- business-card.details: Ajit Garg	;;<hl>
@@ -137,10 +135,9 @@ company-slogan: If you can type you can code
 website: www.fastn.com	;;<hl>
 
 
--- site-doc.header: Let's test it on your machine
+-- site-doc.header: Let's see the business card in your web-browser
 
-Before we host it (by publishing it) on GitHub, let's see the output on 
-browser. 
+Before publishing it on GitHub, let's see the output in the browser. 
 
 - Open the Terminal(MacOS) or Command Prompt(Windows)
 - Go the the directory path of your folder
@@ -166,7 +163,7 @@ website: www.fastn.com
 
 🎉**Congratulations! You have your personalised business card ready.**
 
--- site-doc.header: Let's Host it on GitHub
+-- site-doc.header: Publish your business card online
 
 Your business card is in your local machine. Now if you want to share with 
 others or want to use it in your blogs etc., you must host it. One way is to 
@@ -175,10 +172,16 @@ host it (i.e. Publish it) on GitHub.
 To host your business card on GitHub, follow the steps mentioned in the 
 following video.
 
-Note: YouTube video will be embedded once Ganesh adds Youtube component 
-for site-doc.
+-- site-doc.youtube:
+v: tsHB2Vrhb2c
+width.fixed.percent: 60
 
-Learn More about [Publish Your Site](https://fastn.com/book/gh-pages/)
+
+-- tf.markdown:
+
+Learn More about [Publish Your Site](https://fastn.com/book/gh-pages/).
+
+-- tf.markdown:
 
 - Open the `fastn-template`, [click here](https://github.com/fastn-stack/fastn-template)
 - Click on `Use this template` and select `Create a new repository`
@@ -203,6 +206,8 @@ Learn More about [Publish Your Site](https://fastn.com/book/gh-pages/)
   `index.ftd` document on GitHub and click on `Commit Changes`
 - Once the new `pages build and deployment` workflow executes successfully
 - Now go to `Code` and click on the live site URL from the `About` section
+
+-- tf.markdown:
 
 🎉**Congratulations! Your site is live with your business card.**
 
