@@ -9,6 +9,7 @@ license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
 current-package: fastn-community.github.io/business-card
 show-tabs: false
 github-url: https://github.com/fastn-community/business-card
+site-title: Business Card
 
 -- tf.markdown:
 
