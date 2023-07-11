@@ -1,0 +1,59 @@
+-- import: fastn-community.github.io/business-card/docs
+-- import: fastn-community.github.io/business-card
+-- import: fastn-stack.github.io/fastn-js/utils
+-- import: fastn-community.github.io/bling/note
+
+-- site-doc.doc-home: Business Card
+license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
+current-package: fastn-community.github.io/business-card
+show-tabs: false
+github-url: https://github.com/fastn-community/business-card
+site-title: Business Card
+
+-- business-card.details: John Doe
+company-name: John Doe Pvt. Ltd.
+title: Software Developer
+phone-no: +91 12345 99999
+email: john@johndoe.com
+address: 123, Block No. A-123, Times Sqaure, Bangalore - 123456
+logo: $assets.files.assets.ipsum-logo.svg
+company-slogan: If you can type you can code
+website: www.johndoe.com
+
+-- site-doc.header: Integrate business card into existing package
+
+- **Step 1:** Add below line inside your `FASTN.ftd` file
+
+-- cb.code:
+lang: ftd
+
+\-- fastn.dependency: fastn-community.github.io/business-card
+
+
+-- site-doc.markdown:
+
+- **Step 2:** Add below line inside your `ftd` file
+
+-- cb.code:
+lang: ftd
+
+\-- import: fastn-community.github.io/business-card
+
+-- site-doc.markdown:
+
+- **Step 3:** Add `business-card` inside your `ftd` file
+
+-- cb.code:
+lang: ftd
+
+\-- business-card.details: John Doe
+company-name: John Doe Pvt. Ltd.
+title: Software Developer
+phone-no: +91 12345 99999
+email: john@johndoe.com
+address: 123, Block No. A-123, Times Sqaure, Bangalore - 123456
+logo: $assets.files.assets.ipsum-logo.svg
+company-slogan: If you can type you can code
+website: www.johndoe.com
+
+-- end: site-doc.doc-home
