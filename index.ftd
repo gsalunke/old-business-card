@@ -27,16 +27,36 @@ website: www.johndoe.com
 -- ftd.desktop:
 
 -- ftd.row:
-width.fixed.percent: 50
+width: fill-container
 align-content: center
 spacing: space-between
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+
+-- site-doc.markdown: 
+
+Build a new stand-alone business card from scratch
 
 -- site-doc.button: Build business card
 link: build/
 ;;link: https://github.com/fastn-community/my-card-template/generate
 
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+
+-- site-doc.markdown: 
+
+Integrate this business card into your existing fastn project
+
 -- site-doc.button: Integrate business card
 link: integrate/
+
+-- end: ftd.column
 
 -- end: ftd.row
 
@@ -46,13 +66,19 @@ link: integrate/
 
 -- ftd.column:
 width: fill-container
-align-content: center
-spacing: space-between
-height.fixed.px: 100
+spacing.fixed.px: 24
+
+-- site-doc.markdown: 
+
+Build a new stand-alone business card from scratch
 
 -- site-doc.button: Build business card
 link: build/
 ;;link: https://github.com/fastn-community/my-card-template/generate
+
+-- site-doc.markdown: 
+
+Integrate this business card into your existing fastn project
 
 -- site-doc.button: Integrate business card
 link: integrate/
@@ -109,8 +135,10 @@ boolean $on-hover: false
 boolean $mouse-over: false
 
 -- ftd.column:
+width if { ftd.device == "mobile" }: fill-container
 
 -- ftd.row:
+width if { ftd.device == "mobile" }: fill-container
 spacing.fixed.px: 24
 
 -- ftd.column:
@@ -449,6 +477,7 @@ optional ftd.image-src qr-code:
 optional string website:
 
 -- ftd.column:
+width: fill-container
 
 -- ftd.desktop:
 
@@ -493,7 +522,7 @@ margin-top.px: 16
 width: fill-container
 height.fixed.px: 470
 background.solid: $card-background-color
-min-width.fixed.px: 342
+spacing: space-around
 
 -- ftd.column:
 width: fill-container
