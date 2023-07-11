@@ -24,6 +24,8 @@ website: www.johndoe.com
 
 -- site-doc.header: Build your business card for the first time
 
+-- ftd.desktop:
+
 -- ftd.row:
 width: fill-container
 
@@ -51,5 +53,38 @@ link: https://github.com/fastn-community/my-card-template/generate
 -- end: ftd.column
 
 -- end: ftd.row
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+
+-- site-doc.youtube:
+v: tsHB2Vrhb2c
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+align-self: center
+
+-- ftd.column:
+align-self: center
+
+-- site-doc.button: Build my business card
+link: https://github.com/fastn-community/my-card-template/generate
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.mobile
 
 -- end: site-doc.doc-home

@@ -24,6 +24,8 @@ website: www.johndoe.com
 
 -- site-doc.header: Create your business card
 
+-- ftd.desktop:
+
 -- ftd.row:
 width.fixed.percent: 50
 align-content: center
@@ -37,6 +39,27 @@ link: build/
 link: integrate/
 
 -- end: ftd.row
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+spacing: space-between
+height.fixed.px: 100
+
+-- site-doc.button: Build business card
+link: build/
+;;link: https://github.com/fastn-community/my-card-template/generate
+
+-- site-doc.button: Integrate business card
+link: integrate/
+
+-- end: ftd.column
+
+-- end: ftd.mobile
 
 -- end: site-doc.doc-home
 
