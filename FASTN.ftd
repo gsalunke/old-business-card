@@ -24,18 +24,8 @@ favicon: /-/fastn-community.github.io/business-card/favicon.ico
   skip: true
 - Integrate: /integrate/
   skip: true
+- Contribute: contribute/
 
-# Card: /card/
-skip: true
-
-- Overview: /card/
-- Documentation: /how-to-use-card/
-  document: /card/docs/card.ftd
-
-  - How to Use Card: /how-to-use-card/
-    document: /card/docs/card.ftd
-  - How to Use Card Back: /how-to-use-card-back/
-    document: /card/docs/card-back.ftd
 
 
 
