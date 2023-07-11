@@ -20,7 +20,10 @@ favicon: /-/fastn-community.github.io/business-card/favicon.ico
 # Home: index.html
 
 - Overview: index.html
-
+- Build: /build/
+  skip: true
+- Integrate: /integrate/
+  skip: true
 
 # Card: /card/
 skip: true

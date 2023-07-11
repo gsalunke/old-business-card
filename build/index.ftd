@@ -1,0 +1,55 @@
+-- import: fastn-community.github.io/business-card/docs
+-- import: fastn-community.github.io/business-card
+-- import: fastn-stack.github.io/fastn-js/utils
+-- import: fastn-community.github.io/bling/note
+
+
+-- site-doc.doc-home: Business Card
+license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
+current-package: fastn-community.github.io/business-card
+show-tabs: false
+github-url: https://github.com/fastn-community/business-card
+site-title: Business Card
+
+-- business-card.details: John Doe
+company-name: John Doe Pvt. Ltd.
+title: Software Developer
+phone-no: +91 12345 99999
+email: john@johndoe.com
+address: 123, Block No. A-123, Times Sqaure, Bangalore - 123456
+logo: $assets.files.assets.ipsum-logo.svg
+company-slogan: If you can type you can code
+website: www.johndoe.com
+
+
+-- site-doc.header: Build your business card for the first time
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent: 50
+align-content: left
+
+-- site-doc.youtube:
+v: tsHB2Vrhb2c
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 50
+align-self: center
+
+-- ftd.column:
+align-self: center
+
+-- site-doc.button: Build my business card
+link: https://github.com/fastn-community/my-card-template/generate
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: site-doc.doc-home
