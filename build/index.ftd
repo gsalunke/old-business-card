@@ -22,19 +22,47 @@ company-slogan: If you can type you can code
 website: www.johndoe.com
 
 
--- site-doc.header: Build your business card for the first time
+
+-- site-doc.header: How to create a business card using fastn
+
+This guide is for anyone who wants to create their own business card from
+scratch. 
+
+This entirely runs on the browser. Simply follow along the steps to get 
+started.
+
+
+
 
 -- ftd.desktop:
+
+-- ftd.column:
+width: fill-container
+
+-- tf.h3: `Step 1`: Sign Up or Sign In on GitHub
+
+- [Sign Up](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
+  on GitHub if you do not have a GitHub account already, else 
+  [Sign In](https://github.com/login) 
+  to your GitHub account.
+
+  [Read about GitHub](https://fastn.com/book/github/)
+
+
 
 -- ftd.row:
 width: fill-container
 
 -- ftd.column:
 width.fixed.percent: 50
-align-content: left
+align-content: right
 
--- site-doc.youtube:
-v: tsHB2Vrhb2c
+
+-- tf.h3: `Step 2`: Create your repository
+
+Don't worry we have a template prepared for you. 
+
+- Click on the `Create your repository` button on the right
 
 -- end: ftd.column
 
@@ -45,8 +73,8 @@ align-self: center
 -- ftd.column:
 align-self: center
 
--- site-doc.button: Build my business card
-link: https://github.com/fastn-community/my-card-template/generate
+-- site-doc.button: Create your repository
+link: https://github.com/fastn-community/business-card-template/generate
 
 -- end: ftd.column
 
@@ -54,7 +82,654 @@ link: https://github.com/fastn-community/my-card-template/generate
 
 -- end: ftd.row
 
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent: 50
+align-content: right
+
+-- tf.markdown:
+
+- Give a repository name and click on `Create repository` button
+
+-- end: ftd.column
+
+
+-- ftd.column:
+width.fixed.percent: 50
+align-self: center
+
+-- ftd.column:
+align-self: center
+
+-- ftd.image:
+src: $assets.files.images.create-your-repo.png
+width.fixed.px: 500
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+margin-bottom.px: 16
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+margin-bottom.px: 24
+
+-- ftd.column:
+width.fixed.percent: 50
+align-content: right
+
+-- tf.markdown:
+
+- Wait for the repo to complete it's `Intital Commits`. Before proceeding, 
+
+  Check the `Actions` tab if the 2 workflows of Intial Commit has successfully 
+  completed with green ticks.
+
+  These initial commits renames the template with your GitHub username.
+
+-- end: ftd.column
+
+
+-- ftd.column:
+width.fixed.percent: 50
+align-self: center
+
+-- ftd.column:
+align-self: center
+
+-- ftd.image:
+src: $assets.files.images.initial-commit-workflows.png
+width.fixed.px: 500
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+-- tf.h3: `Step 3`: Generate a live site for yourself
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent: 50
+align-content: right
+
+-- tf.markdown:
+
+- Go to `Settings` 
+
+- Select `Pages`, from Table of Content
+
+- Under Branch, click on the drop-down and select `gh-pages`
+
+- Click on `Save`
+
+This will build your GitHub pages and deploy your website.
+
+To verify, go back to `Actions` and you will see 3 workflows now, the latest 
+will be `pages and deployment`.
+
+-- end: ftd.column
+
+
+-- ftd.column:
+width.fixed.percent: 50
+align-self: center
+
+-- ftd.column:
+align-self: center
+
+-- ftd.image:
+src: $assets.files.images.gh-page-deployment.png
+width.fixed.px: 500
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+margin-bottom.px: 16
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent: 50
+align-content: right
+
+-- tf.markdown:
+
+- Go back to `Settings > Pages` 
+
+- Copy the URL of live site
+
+-- end: ftd.column
+
+
+-- ftd.column:
+width.fixed.percent: 50
+align-self: center
+
+-- ftd.column:
+align-self: center
+
+-- ftd.image:
+src: $assets.files.images.live-site-url.png
+width.fixed.px: 500
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+
+-- ftd.row:
+width: fill-container
+margin-bottom.px: 24
+
+-- ftd.column:
+width.fixed.percent: 50
+align-content: right
+
+-- tf.markdown:
+
+- Go to `Code` tab (first tab) 
+
+- On the right side, click on Settings icon
+
+- In the `Edit repository details` popup, paste the Website URL in the second 
+field
+
+- Click on `Save`
+
+Now you can access your website from here.
+
+If you click on the URL now, it will show the default business-card.
+
+-- end: ftd.column
+
+
+-- ftd.column:
+width.fixed.percent: 50
+align-self: center
+
+-- ftd.column:
+align-self: center
+
+-- ftd.image:
+src: $assets.files.images.about-section.png
+width.fixed.px: 500
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+
+-- tf.h3: `Step 4`: Personalise the card
+
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent: 50
+align-content: right
+
+-- tf.markdown:
+
+- Open `index.ftd` document from the `Code` tab on GitHub
+
+- Click on the `edit` icon, to make the `index.ftd` document editable
+
+
+-- end: ftd.column
+
+
+-- ftd.column:
+width.fixed.percent: 50
+align-self: center
+
+-- ftd.column:
+align-self: center
+
+-- ftd.image:
+src: $assets.files.images.edit-index-ftd.png
+width.fixed.px: 500
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent: 50
+align-content: right
+
+-- tf.markdown:
+
+- Personalise the card with your information
+
+- Click on the `Commit changes...` button
+
+- If you wish you can put detail about the changes in popup, else click on 
+`Commit changes` again.
+
+The `Actions` tab will have new workflow running. Wait for it to complete.
+
+Once complete, open the URL in the `Website` section in the `Code` tab. 
+
+
+-- end: ftd.column
+
+
+-- ftd.column:
+width.fixed.percent: 50
+align-self: center
+
+-- ftd.column:
+align-self: center
+
+-- ftd.image:
+src: $assets.files.images.personalise-the-card.png
+width.fixed.px: 500
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent: 50
+align-content: right
+
+-- tf.markdown:
+
+- Once complete, open the URL in the `Website` section in the `Code` tab or 
+refresh the window if already opened.
+
+
+There you go, you have created your personalised business card.
+
+
+-- end: ftd.column
+
+
+-- ftd.column:
+width.fixed.percent: 50
+align-self: center
+
+-- ftd.column:
+align-self: center
+
+-- ftd.image:
+src: $assets.files.images.personalised-card.png
+width.fixed.px: 500
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+margin-bottom.px: 16
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+-- ftd.row:
+width: fill-container
+margin-bottom.px: 24
+
+-- ftd.column:
+width.fixed.percent: 50
+align-content: right
+
+-- tf.markdown:
+
+- You can also change the logo on the card
+
+
+There you go, you have created your personalised business card.
+
+
+-- end: ftd.column
+
+
+
+-- ftd.column:
+width.fixed.percent: 50
+align-self: center
+
+-- ftd.column:
+align-self: center
+
+-- ftd.image:
+src: $assets.files.images.personalised-card.png
+width.fixed.px: 500
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+
+
+-- tf.h3: `Step 5`: Update your own logo
+
+The card is personalised but there is still something missing - logo.
+
+Let's see how to upload your logo and add it in your business card.
+
+
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent: 50
+align-content: right
+
+-- tf.markdown:
+
+To change the logo on the card, we need to upload it on GitHub and use it as 
+`assets`.
+
+It always good to put the image in one location. Here, we have `assets` 
+folder where we can upload our logo file.
+
+- Open the `assets` folder from `Code` tab
+
+
+-- end: ftd.column
+
+
+
+-- ftd.column:
+width.fixed.percent: 50
+align-self: center
+
+-- ftd.column:
+align-self: center
+
+-- ftd.image:
+src: $assets.files.images.open-assets-folder.png
+width.fixed.px: 500
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+margin-bottom.px: 16
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+
+
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent: 50
+align-content: right
+
+-- tf.markdown:
+
+
+- Click on `Add file` and select `Upload files` option
+
+
+-- end: ftd.column
+
+
+
+-- ftd.column:
+width.fixed.percent: 50
+align-self: center
+
+-- ftd.column:
+align-self: center
+
+-- ftd.image:
+src: $assets.files.images.upload-logo.png
+width.fixed.px: 500
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+margin-bottom.px: 16
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent: 50
+align-content: right
+
+-- tf.markdown:
+
+
+- Once uploaded, commit your changes.
+
+
+-- end: ftd.column
+
+
+
+-- ftd.column:
+width.fixed.percent: 50
+align-self: center
+
+-- ftd.column:
+align-self: center
+
+-- ftd.image:
+src: $assets.files.images.commit-uploaded-logo.png
+width.fixed.px: 500
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent: 50
+align-content: right
+
+-- tf.markdown:
+
+
+- Now open and edit `index.ftd` and update the value of the `logo` property
+
+
+-- cb.code:
+lang: fd
+
+\logo: $assets.files.assets.ipsum-logo.svg
+
+-- tf.markdown:
+
+- Replace `ipsum-logo.svg` with your file name along with it's extension
+
+Example:
+
+-- cb.code:
+lang: fd
+
+\logo: $assets.files.assets.fastn.svg
+
+-- tf.markdown:
+
+- Commit your changes
+
+
+-- end: ftd.column
+
+
+
+-- ftd.column:
+width.fixed.percent: 50
+align-self: center
+
+-- ftd.column:
+align-self: center
+
+-- ftd.image:
+src: $assets.files.images.logo-updated.png
+width.fixed.px: 500
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+width.fixed.percent: 50
+align-content: right
+
+-- tf.markdown:
+
+Your logo is also personalised.
+
+
+-- end: ftd.column
+
+
+
+-- ftd.column:
+width.fixed.percent: 50
+align-self: center
+
+-- ftd.column:
+align-self: center
+
+-- ftd.image:
+src: $assets.files.images.final-output.png
+width.fixed.px: 500
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+
+
+/-- business-card.details: Ajit Garg
+company-name: FifthTry Pvt. Ltd.
+title: DevRel
+phone-no: +91 12345 99999
+email: ajit@fifthtry.com
+address: 123, Block No. A-123, Times Sqaure, Bangalore - 123456
+logo: $assets.files.assets.fastn.svg
+company-slogan: If can type you can code
+website: www.ajitgarg.com
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+
+-- end: ftd.column
+
 -- end: ftd.desktop
+
+
+
+
+
 
 -- ftd.mobile:
 
