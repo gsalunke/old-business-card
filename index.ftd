@@ -4,6 +4,7 @@
 -- import: fastn-community.github.io/bling/note
 
 
+
 -- site-doc.doc-home: Business Card
 license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
 current-package: fastn-community.github.io/business-card
@@ -11,16 +12,37 @@ show-tabs: false
 github-url: https://github.com/fastn-community/business-card
 site-title: Business Card
 
+-- site-doc.header: How to make business cards
+
+This guide will demonstrate how to make simple business cards using `fastn`. 
+`fastn` is a beginner friendly web-development platform. 
+Check out [`fastn`](https://fastn.com/).
+
+
+
+
 -- business-card.details: John Doe
 company-name: John Doe Pvt. Ltd.
 title: Software Developer
 phone-no: +91 12345 99999
 email: john@johndoe.com
-address: 123, Block No. A-123, Times Sqaure, Bangalore - 123456
+address: 123, Block No. A-123, Times Square, Bangalore - 123456
 logo: $assets.files.assets.ipsum-logo.svg
 company-slogan: If you can type you can code
 website: www.johndoe.com
 
+
+-- cb.code: Source Code
+
+\-- business-card.details: John Doe
+company-name: John Doe Pvt. Ltd.
+title: Software Developer
+phone-no: +91 12345 99999
+email: john@johndoe.com
+address: 123, Block No. A-123, Times Square, Bangalore - 123456
+logo: $assets.files.assets.ipsum-logo.svg
+company-slogan: If you can type you can code
+website: www.johndoe.com
 
 -- site-doc.header: Create your business card
 
