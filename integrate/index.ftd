@@ -79,7 +79,7 @@ website: www.johndoe.com
 
 
 
--- ftd.image:
+/-- ftd.image:
 src: $assets.files.images.integrated-card-output.png
 width.fixed.px: 650
 border-radius.px: 10
