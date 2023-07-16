@@ -22,7 +22,7 @@ website: www.johndoe.com
 
 -- site-doc.header: Integrate business card into existing package
 
-- **Step 1:** Add below line inside your `FASTN.ftd` file
+- **Step 1:** Add below line inside your `FASTN.ftd` document
 
 -- cb.code:
 lang: ftd
@@ -30,18 +30,39 @@ lang: ftd
 \-- fastn.dependency: fastn-community.github.io/business-card
 
 
+-- ftd.image:
+src: $assets.files.images.add-dependency.png
+width.fixed.px: 650
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+
+
+
+
 -- site-doc.markdown:
 
-- **Step 2:** Add below line inside your `ftd` file
+- **Step 2:** Add below line inside your `ftd` document
 
 -- cb.code:
 lang: ftd
 
 \-- import: fastn-community.github.io/business-card
 
+
+
+-- ftd.image:
+src: $assets.files.images.import-in-ftd.png
+width.fixed.px: 650
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+
+
+
 -- site-doc.markdown:
 
-- **Step 3:** Add `business-card` inside your `ftd` file
+- **Step 3:** Add `business-card` inside your `ftd` document and personalise it
 
 -- cb.code:
 lang: ftd
@@ -55,5 +76,14 @@ address: 123, Block No. A-123, Times Sqaure, Bangalore - 123456
 logo: $assets.files.assets.ipsum-logo.svg
 company-slogan: If you can type you can code
 website: www.johndoe.com
+
+
+
+-- ftd.image:
+src: $assets.files.images.integrated-card-output.png
+width.fixed.px: 650
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
 
 -- end: site-doc.doc-home
