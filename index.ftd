@@ -12,15 +12,6 @@ show-tabs: false
 github-url: https://github.com/fastn-community/business-card
 site-title: Business Card
 
--- site-doc.header: How to make business cards
-
-This guide will demonstrate how to make simple business cards using `fastn`. 
-`fastn` is a beginner friendly web-development platform. 
-Check out [`fastn`](https://fastn.com/).
-
-
-
-
 -- business-card.details: John Doe
 company-name: John Doe Pvt. Ltd.
 title: Software Developer
