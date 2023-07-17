@@ -12,6 +12,71 @@ show-tabs: false
 github-url: https://github.com/fastn-community/business-card
 site-title: Business Card
 
+-- site-doc.header: Create your business card
+
+-- ftd.desktop:
+
+-- ftd.row:
+width: fill-container
+align-content: center
+spacing: space-between
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+
+-- site-doc.markdown: 
+
+Build a new stand-alone business card from scratch
+
+-- site-doc.button: Create a site with business card
+link: build/
+;;link: https://github.com/fastn-community/my-card-template/generate
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+
+-- site-doc.markdown: 
+
+Integrate this business card into your existing fastn project
+
+-- site-doc.button: Add business card to your existing site
+link: integrate/
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+
+-- site-doc.markdown: 
+
+Build a new stand-alone business card from scratch
+
+-- site-doc.button: Create a site with business card
+link: build/
+;;link: https://github.com/fastn-community/my-card-template/generate
+
+-- site-doc.markdown: 
+
+Integrate this business card into your existing fastn project
+
+-- site-doc.button: Add business card to your existing site
+link: integrate/
+
+-- end: ftd.column
+
+-- end: ftd.mobile
+
 -- business-card.details: John Doe
 company-name: John Doe Pvt. Ltd.
 title: Software Developer
@@ -34,71 +99,6 @@ address: 123, Block No. A-123, Times Square, Bangalore - 123456
 logo: $assets.files.assets.ipsum-logo.svg
 company-slogan: If you can type you can code
 website: www.johndoe.com
-
--- site-doc.header: Create your business card
-
--- ftd.desktop:
-
--- ftd.row:
-width: fill-container
-align-content: center
-spacing: space-between
-
--- ftd.column:
-width: fill-container
-spacing.fixed.px: 24
-
--- site-doc.markdown: 
-
-Build a new stand-alone business card from scratch
-
--- site-doc.button: Build business card
-link: build/
-;;link: https://github.com/fastn-community/my-card-template/generate
-
--- end: ftd.column
-
--- ftd.column:
-width: fill-container
-spacing.fixed.px: 24
-
--- site-doc.markdown: 
-
-Integrate this business card into your existing fastn project
-
--- site-doc.button: Integrate business card
-link: integrate/
-
--- end: ftd.column
-
--- end: ftd.row
-
--- end: ftd.desktop
-
--- ftd.mobile:
-
--- ftd.column:
-width: fill-container
-spacing.fixed.px: 24
-
--- site-doc.markdown: 
-
-Build a new stand-alone business card from scratch
-
--- site-doc.button: Build business card
-link: build/
-;;link: https://github.com/fastn-community/my-card-template/generate
-
--- site-doc.markdown: 
-
-Integrate this business card into your existing fastn project
-
--- site-doc.button: Integrate business card
-link: integrate/
-
--- end: ftd.column
-
--- end: ftd.mobile
 
 -- end: site-doc.doc-home
 
