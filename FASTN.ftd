@@ -27,3 +27,6 @@ favicon: /-/fastn-community.github.io/business-card/favicon.ico
 
 
 
+-- fastn.redirects:
+
+/build/: /create/
