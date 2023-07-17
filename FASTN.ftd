@@ -20,11 +20,9 @@ favicon: /-/fastn-community.github.io/business-card/favicon.ico
 # Home: index.html
 
 - Overview: index.html
-- Build: /build/
-  skip: true
-- Integrate: /integrate/
-  skip: true
-- Contribute: contribute/
+- Create a site with business card: /create/
+- Add business card to your existing site: /integrate/
+;;- Contribute: contribute/
 
 
 
