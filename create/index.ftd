@@ -334,36 +334,10 @@ margin-vertical.px: 16
 width: fill-container
 margin-vertical.px: 16
 
--- tf.h3: Improve the URL accessibility
+-- tf.h3: `Step 6`: Improve the URL accessibility [Optional] 
 
-You may wish to change your information in future, in that case to check the 
-updates you will need to come to `Settings > Pages` everytime. 
-
-Instead, you can access it from the `Code` tab itself. 
-
-- Copy the URL of live site by going to `Settings > Pages`
-
-
--- ftd.image:
-src: $assets.files.images.live-site-url.png
-width.fixed.px: 750
-border-radius.px: 10
-border-width.px: 1
-border-color: $inherited.colors.border
-margin-vertical.px: 16
-
-
--- tf.markdown:
-
-- Go to `Code` tab (first tab) 
-
-- On the right side, you will find `About section`, click on the `Settings` 
-icon (⚙️) 
-
-- In the `Edit repository details` popup, paste the Website URL in the second 
-field
-
-- Click on `Save`
+To quickly view your website, we recommend you to add your URL to the `About` 
+section. 
 
 
 -- ftd.image:
@@ -373,6 +347,18 @@ border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
 margin-vertical.px: 16
+
+-- tf.markdown:
+
+To do that follow the steps:
+
+- click on the `Settings` icon (⚙️)
+
+- Select the checkbox `Use your GitHub Pages website` just below second field 
+
+- Click on `Save`
+
+
 
 -- tf.markdown:
 
@@ -386,18 +372,6 @@ border-width.px: 1
 border-color: $inherited.colors.border
 margin-vertical.px: 16
 
-
--- tf.h3: Personalised business card
-
--- business-card.details: Ajit Garg
-company-name: FifthTry Pvt. Ltd.
-title: DevRel
-phone-no: +91 12345 99999
-email: ajit@fifthtry.com
-address: 123, Block No. A-123, Times Sqaure, Bangalore - 123456
-logo: $assets.files.assets.fastn.svg
-company-slogan: If can type you can code
-website: www.ajitgarg.com
 
 
 -- end: ftd.column
