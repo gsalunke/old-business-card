@@ -67,6 +67,7 @@ margin-vertical.px: 16
 
 -- site-doc.button: Create your repository
 link: https://github.com/fastn-community/business-card-template/generate
+open-in-new-tab: true
 
 -- end: ftd.column
 
@@ -245,9 +246,6 @@ For `logo` replace `ipsum-logo.svg` with the file you uploaded
 - If you wish you can put detail about the changes in popup, else click on 
 `Commit changes` again.
 
-The `Actions` tab will have new workflow running, wait for it to complete.
-
-Once complete you can view your card by generating a live site on GitHub.
 
 
 -- ftd.image:
@@ -257,6 +255,13 @@ border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
 margin-vertical.px: 16
+
+
+-- tf.markdown:
+
+The `Actions` tab will have new workflow running, wait for it to complete.
+
+Once complete you can view your card by generating a live site on GitHub.
 
 
 -- end: ftd.column
