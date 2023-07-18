@@ -62,7 +62,7 @@ border-color: $inherited.colors.border
 
 -- site-doc.markdown:
 
-- **Step 3:** Add `business-card` inside your `ftd` document and personalise it
+- **Step 3:** Add the following business card in your project
 
 -- cb.code:
 lang: ftd
@@ -78,10 +78,27 @@ company-slogan: If you can type you can code
 website: www.johndoe.com
 
 
+-- site-doc.markdown:
 
-/-- ftd.image:
+- **Step 4:** Personalise the business card with your data
+
+-- cb.code:
+lang: ftd
+
+\-- business-card.details: Ajit Garg
+company-name: FifthTry Pvt. Ltd.
+title: Devrel
+phone-no: +91 12345 99999
+email: ajit@fifthtry.com
+address: 123, Block No. A-123, Times Square, Bangalore - 123456
+logo: $assets.files.assets.fastn.svg
+company-slogan: If you can type you can code
+website: www.fastn.com
+
+
+-- ftd.image:
 src: $assets.files.images.integrated-card-output.png
-width.fixed.px: 650
+width: fill-container
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
