@@ -316,6 +316,8 @@ margin-vertical.px: 16
 
 There you go, you have created your personalised business card.
 
+-- tf.h3: Final Output
+
 -- ftd.image:
 src: $assets.files.images.personalised-card.png
 width.fixed.px: 750
@@ -385,7 +387,7 @@ border-color: $inherited.colors.border
 margin-vertical.px: 16
 
 
--- tf.h3: Final Output
+-- tf.h3: Personalised business card
 
 -- business-card.details: Ajit Garg
 company-name: FifthTry Pvt. Ltd.
