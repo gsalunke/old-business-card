@@ -272,7 +272,7 @@ Once complete you can view your card by generating a live site on GitHub.
 width: fill-container
 margin-vertical.px: 16
 
--- tf.h3: `Step 4`: Generate a live site for yourself
+-- tf.h3: `Step 5`: Generate a live site for yourself
 
 - Go to `Settings` 
 
