@@ -30,8 +30,22 @@ width: fill-container
   [Sign In](https://github.com/login) 
   to your GitHub account.
 
-  [Read about GitHub](https://fastn.com/book/github/)
+  [Read more about GitHub](https://fastn.com/book/github/)
 
+
+If you are a new user on GitHub, you will see the following dashboard:
+
+-- ftd.image:
+src: $assets.files.images.new-user-dashboard.png
+width.fixed.px: 750
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+margin-vertical.px: 16
+
+-- tf.markdown:
+
+Proceed with `Step 2`
 
 -- ftd.column:
 width: fill-container
@@ -85,22 +99,22 @@ margin-vertical.px: 16
 
 
 
-
 -- ftd.column:
 width: fill-container
 
-
 -- tf.markdown:
 
-- Before proceeding, wait for the repo to complete it's `Intital Commits`.  
-
-  Check the `Actions` tab if the 2 workflows of Intial Commit has successfully 
-  completed with green ticks.
+As you can see, your repository is created using the template called
+`fastn-community/business-card-template`.
 
 
+For a user who has just signed-up on GitHub or signed-in but never created 
+any repository will not see the template, instead they will see the following:
+
+In both cases, Give a repository name and click on `Create repository` button
 
 -- ftd.image:
-src: $assets.files.images.initial-commit-workflows.png
+src: $assets.files.images.new-user-view.png
 width.fixed.px: 750
 border-radius.px: 10
 border-width.px: 1
