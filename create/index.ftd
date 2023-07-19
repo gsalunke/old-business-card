@@ -4,26 +4,11 @@
 -- import: fastn-community.github.io/bling/note
 
 
--- site-doc.doc-home: Business Card
-license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
-current-package: fastn-community.github.io/business-card
+-- site-doc.doc-home: Create a site with business card
 show-tabs: false
 github-url: https://github.com/fastn-community/business-card
-site-title: Business Card
+site-title: Create a site with Business Card
 
--- business-card.details: John Doe
-company-name: John Doe Pvt. Ltd.
-title: Software Developer
-phone-no: +91 12345 99999
-email: john@johndoe.com
-address: 123, Block No. A-123, Times Sqaure, Bangalore - 123456
-logo: $assets.files.assets.ipsum-logo.svg
-company-slogan: If you can type you can code
-website: www.johndoe.com
-
-
-
--- site-doc.header: How to create a business card using fastn
 
 This guide is for anyone who wants to create their own business card from
 scratch. 
@@ -53,11 +38,10 @@ width: fill-container
 align-content: left
 
 
--- tf.h3: `Step 2`: Create your repository
+-- tf.h3: `Step 2`: Add business card template to GitHub
 
-Don't worry we have a template prepared for you. 
 
-- Click on the `Create your repository` button
+- Click on the following button
 
 -- ftd.column:
 width: fill-container
@@ -65,7 +49,7 @@ align-content: left
 margin-vertical.px: 16
 
 
--- site-doc.button: Create your repository
+-- site-doc.button: Add template
 link: https://github.com/fastn-community/business-card-template/generate
 open-in-new-tab: true
 
@@ -204,7 +188,7 @@ width: fill-container
 
 To personalise the card with your information:
 
-- Open `index.ftd` document from the `Code` tab on GitHub
+- Open `index.ftd` document
 
 - Click on the `edit` icon, to make the `index.ftd` document editable
 
