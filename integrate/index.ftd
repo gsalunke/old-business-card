@@ -3,24 +3,10 @@
 -- import: fastn-stack.github.io/fastn-js/utils
 -- import: fastn-community.github.io/bling/note
 
--- site-doc.doc-home: Business Card
-license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
-current-package: fastn-community.github.io/business-card
+-- site-doc.doc-home: Add business card to your existing `fastn` site
 show-tabs: false
 github-url: https://github.com/fastn-community/business-card
-site-title: Business Card
-
--- business-card.details: John Doe
-company-name: John Doe Pvt. Ltd.
-title: Software Developer
-phone-no: +91 12345 99999
-email: john@johndoe.com
-address: 123, Block No. A-123, Times Sqaure, Bangalore - 123456
-logo: $assets.files.assets.ipsum-logo.svg
-company-slogan: If you can type you can code
-website: www.johndoe.com
-
--- site-doc.header: Integrate business card into existing package
+site-title: Add Business Card to `fastn` site
 
 - **Step 1:** Add below line inside your `FASTN.ftd` document
 
@@ -76,6 +62,13 @@ address: 123, Block No. A-123, Times Sqaure, Bangalore - 123456
 logo: $assets.files.assets.ipsum-logo.svg
 company-slogan: If you can type you can code
 website: www.johndoe.com
+
+-- ftd.image:
+src: $assets.files.images.default-business-card.png
+width: fill-container
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
 
 
 -- site-doc.markdown:
