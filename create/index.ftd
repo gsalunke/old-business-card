@@ -82,7 +82,9 @@ width: fill-container
 
 -- tf.markdown:
 
-- Give a repository name and click on `Create repository` button
+- Give a repository name and click on `Create repository` button 
+
+  (eg: business-card, my-card, my-business-card, etc.)
 
 
 -- ftd.image:
