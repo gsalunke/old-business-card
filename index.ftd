@@ -40,7 +40,7 @@ Build a new stand-alone business card from scratch
 
 -- site-doc.button: Create a site with business card
 link: create/
-;;link: https://github.com/fastn-community/my-card-template/generate
+secondary: true
 
 -- end: ftd.column
 
@@ -87,7 +87,7 @@ link: integrate/
 -- end: ftd.mobile
 
 
--- cb.code: Source Code
+-- cb.code: Example usage
 
 \-- business-card.details: John Doe
 company-name: John Doe Pvt. Ltd.
@@ -301,7 +301,7 @@ spacing: space-around
 
 -- ftd.image: $front.logo
 if: { front.logo != NULL }
-width.fixed.px: 250
+max-width.fixed.px: 250
 
 -- end: ftd.column
 
@@ -520,7 +520,7 @@ align-content: center
 
 -- ftd.image: $back.logo
 if: { back.logo != NULL }
-width.fixed.px: 250
+max-width.fixed.px: 250
 
 -- ftd.text: $back.company-slogan
 if: { back.company-slogan != NULL }
