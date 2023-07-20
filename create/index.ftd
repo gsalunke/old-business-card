@@ -331,7 +331,7 @@ margin-vertical.px: 16
 
 The output still has the default logo, so now we will personalise the logo.
 
-It always good to put the image in one location. Here, we have `assets` 
+It's always good to put the image in one location. Here, we have `assets` 
 folder where we can upload our logo file.
 
 - Open the `assets` folder from `Code` tab
