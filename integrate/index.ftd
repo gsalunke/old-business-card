@@ -8,6 +8,8 @@ show-tabs: false
 github-url: https://github.com/fastn-community/business-card
 site-title: Add Business Card to `fastn` site
 
+
+
 - **Step 1:** Add below line inside your `FASTN.ftd` document
 
 -- cb.code:
@@ -69,6 +71,8 @@ width: fill-container
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
+
+
 
 
 -- site-doc.markdown:

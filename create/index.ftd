@@ -33,9 +33,9 @@ width: fill-container
   [Read more about GitHub](https://fastn.com/book/github/)
 
 
-If you are a new user on GitHub, you will see the following dashboard:
+Once you are signed in, you can proceed to `Step 2`
 
--- ftd.image:
+/-- ftd.image:
 src: $assets.files.images.new-user-dashboard.png
 width.fixed.px: 750
 border-radius.px: 10
@@ -43,24 +43,21 @@ border-width.px: 1
 border-color: $inherited.colors.border
 margin-vertical.px: 16
 
--- tf.markdown:
-
-Proceed with `Step 2`
-
--- ftd.column:
-width: fill-container
-align-content: left
-
 
 -- tf.h3: `Step 2`: Add business card template to GitHub
 
+-- ftd.row:
+width: fill-container
+align-content: left
 
-- Click on the following button
+-- tf.markdown:
+
+- Click on the following button to add the template 👉
 
 -- ftd.column:
 width: fill-container
 align-content: left
-margin-vertical.px: 16
+margin-horizontal.px: 6
 
 
 -- site-doc.button: Add template
@@ -69,7 +66,7 @@ open-in-new-tab: true
 
 -- end: ftd.column
 
--- end: ftd.column
+-- end: ftd.row
 
 
 
@@ -84,7 +81,7 @@ width: fill-container
 
 - Give a repository name and click on `Create repository` button 
 
-  (repository name examples: business-card, my-card, my-business-card, etc.)
+  (*repository name examples*: business-card, my-card, my-business-card, etc.)
 
 
 -- ftd.image:
@@ -124,7 +121,29 @@ border-color: $inherited.colors.border
 margin-vertical.px: 16
 
 
+-- tf.markdown: 
+
+As soon as it creates the repository you will see the page that will display 
+the repository name along with the template name. You will have various tabs.
+
+In the first tab ie. `Code` you can find all the files and folders.
+
+
+-- ftd.image:
+src: $assets.files.images.repo-home-page.png
+width.fixed.px: 750
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+margin-vertical.px: 16
+
+
 -- end: ftd.column
+
+
+
+
+
 
 
 
@@ -137,8 +156,180 @@ margin-vertical.px: 16
 width: fill-container
 margin-vertical.px: 16
 
--- tf.h3: `Step 3`: Upload your logo
+-- tf.h3: `Step 3`: Generate a live site
 
+- Go to `Settings` from the list of the tabs
+
+- Select `Pages` from Table of Content
+
+- Under Branch, click on the drop-down and select `gh-pages`
+
+- Click on `Save`
+
+This will build your GitHub pages and deploy your website.
+
+
+
+-- ftd.image:
+src: $assets.files.images.gh-page-deployment.png
+width.fixed.px: 750
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+margin-vertical.px: 16
+
+
+-- tf.markdown:
+
+- Once it's complete, you will find your live site as shown in the following image. To see your business card click on the button `Visit site`.
+
+
+-- ftd.image:
+src: $assets.files.images.live-site.png
+width.fixed.px: 750
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+margin-vertical.px: 16
+
+-- tf.markdown:
+
+In the new tab you can see the default business card.
+
+
+
+-- ftd.column:
+width: fill-container
+margin-vertical.px: 16
+
+-- tf.h3: `Step 4`: Improve the URL accessibility [Optional] 
+
+To quickly view your website, we recommend you to add your URL to the `About` 
+section. 
+
+
+-- ftd.image:
+src: $assets.files.images.about-section.png
+width.fixed.px: 750
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+margin-vertical.px: 16
+
+-- tf.markdown:
+
+To do that follow the steps:
+
+- Go back to the tab where GitHub is open
+
+- Open the first tab i.e. `Code`
+
+- click on the `Settings` icon (⚙️)
+
+- Select the checkbox `Use your GitHub Pages website` just below second field 
+
+- Click on `Save`
+
+
+
+-- tf.markdown:
+
+Now you can access your website from `About` section.
+
+-- ftd.image:
+src: $assets.files.images.updated-about-section.png
+width.fixed.px: 350
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+margin-vertical.px: 16
+
+
+
+-- end: ftd.column
+
+
+
+-- ftd.column:
+width: fill-container
+
+
+-- tf.h3: `Step 5`: Personalise the business card
+
+To personalise the card with your information:
+
+- Open `index.ftd` document
+
+- Click on the `edit` icon, to make the `index.ftd` document editable
+
+
+-- ftd.image:
+src: $assets.files.images.edit-index-ftd.png
+width.fixed.px: 750
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+margin-vertical.px: 16
+
+
+-- tf.markdown:
+
+**`Note`**: Now replace the default data with your information
+
+```
+Example 1:
+
+`John Doe` with `Ajit Garg`, `Chief Executive Officer` with `DevRel` etc.
+```
+```
+Example 2:
+
+You can remove the property entirely if you do not wish to provide that data.
+```
+
+
+-- tf.markdown:
+
+- Click on the `Commit changes...` button
+
+- If you wish you can put detail about the changes in popup, else click on 
+`Commit changes` again.
+
+
+
+-- ftd.image:
+src: $assets.files.images.personalise-the-card.png
+width.fixed.px: 750
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+margin-vertical.px: 16
+
+
+-- tf.markdown:
+
+;; The `Actions` tab will have new workflow running, wait for it to complete.
+
+- Once complete open the browser tab where your live site is running
+
+- Refresh the browser
+
+
+-- end: ftd.column
+
+
+
+
+
+
+
+-- ftd.column:
+width: fill-container
+margin-vertical.px: 16
+
+-- tf.h3: `Step 6`: Upload your logo
+
+The output still has the default logo, so now we will personalise the logo.
 
 It always good to put the image in one location. Here, we have `assets` 
 folder where we can upload our logo file.
@@ -174,8 +365,8 @@ margin-vertical.px: 16
 
 - Upload the file (in my case, file name is `fastn.svg`)
 
-  `NOTE`: file name and extension can be anything for eg: *abc.png*, *pqr.jpeg*, 
-  *xyz.svg*
+  `NOTE`: file name and extension can be anything for eg: *abc.png*, 
+  *pqr.jpeg*, *xyz.svg*
 
 - Once uploaded, commit your changes.
 
@@ -187,134 +378,16 @@ border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
 
+-- tf.markdown: 
 
+Go back to the browser tab where your site is open and refresh the browser.
 
--- end: ftd.column
-
-
-
-
-
-
--- ftd.column:
-width: fill-container
-
-
--- tf.h3: `Step 4`: Personalise the business card
-
-To personalise the card with your information:
-
-- Open `index.ftd` document
-
-- Click on the `edit` icon, to make the `index.ftd` document editable
-
-
--- ftd.image:
-src: $assets.files.images.edit-index-ftd.png
-width.fixed.px: 750
-border-radius.px: 10
-border-width.px: 1
-border-color: $inherited.colors.border
-margin-vertical.px: 16
-
-
--- tf.markdown:
-
-**`Note`**: Now replace the default data with your information
-
-```
-Example 1:
-
-`John Doe` with `Ajit Garg`, `Chief Executive Officer` with `DevRel` etc.
-```
-```
-Example 2:
-
-You can remove the property entirely if you do not wish to provide that data.
-```
-```
-Example 3:
-
-For `logo` replace `ipsum-logo.svg` with the file you uploaded 
-(for example: in my case it was `fastn.svg`)
-```
-
--- tf.markdown:
-
-- Click on the `Commit changes...` button
-
-- If you wish you can put detail about the changes in popup, else click on 
-`Commit changes` again.
-
-
-
--- ftd.image:
-src: $assets.files.images.personalise-the-card.png
-width.fixed.px: 750
-border-radius.px: 10
-border-width.px: 1
-border-color: $inherited.colors.border
-margin-vertical.px: 16
-
-
--- tf.markdown:
-
-The `Actions` tab will have new workflow running, wait for it to complete.
-
-Once complete you can view your card by generating a live site on GitHub.
-
+There you go you have your personalised business card ready.
 
 -- end: ftd.column
 
 
 
--- ftd.column:
-width: fill-container
-margin-vertical.px: 16
-
--- tf.h3: `Step 5`: Generate a live site for yourself
-
-- Go to `Settings` 
-
-- Select `Pages` from Table of Content
-
-- Under Branch, click on the drop-down and select `gh-pages`
-
-- Click on `Save`
-
-This will build your GitHub pages and deploy your website.
-
-To verify, go back to `Actions` and you will see a new workflow running, the 
-latest will be `pages and deployment`. 
-
-
--- ftd.image:
-src: $assets.files.images.gh-page-deployment.png
-width.fixed.px: 750
-border-radius.px: 10
-border-width.px: 1
-border-color: $inherited.colors.border
-margin-vertical.px: 16
-
-
--- tf.markdown:
-
-- Once it's complete, go back to `Settings > Pages` 
-
-- You will find your live site as shown in the following image. To see your business card click on the button `Visit site`.
-
-
--- ftd.image:
-src: $assets.files.images.live-site.png
-width.fixed.px: 750
-border-radius.px: 10
-border-width.px: 1
-border-color: $inherited.colors.border
-margin-vertical.px: 16
-
--- tf.markdown:
-
-There you go, you have created your personalised business card.
 
 -- tf.h3: Final Output
 
@@ -330,51 +403,7 @@ margin-vertical.px: 16
 -- end: ftd.column
 
 
--- ftd.column:
-width: fill-container
-margin-vertical.px: 16
 
--- tf.h3: `Step 6`: Improve the URL accessibility [Optional] 
-
-To quickly view your website, we recommend you to add your URL to the `About` 
-section. 
-
-
--- ftd.image:
-src: $assets.files.images.about-section.png
-width.fixed.px: 750
-border-radius.px: 10
-border-width.px: 1
-border-color: $inherited.colors.border
-margin-vertical.px: 16
-
--- tf.markdown:
-
-To do that follow the steps:
-
-- click on the `Settings` icon (⚙️)
-
-- Select the checkbox `Use your GitHub Pages website` just below second field 
-
-- Click on `Save`
-
-
-
--- tf.markdown:
-
-Now you can access your website from `About` section.
-
--- ftd.image:
-src: $assets.files.images.updated-about-section.png
-width.fixed.px: 350
-border-radius.px: 10
-border-width.px: 1
-border-color: $inherited.colors.border
-margin-vertical.px: 16
-
-
-
--- end: ftd.column
 
 -- end: ftd.column
 
