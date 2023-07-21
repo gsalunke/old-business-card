@@ -20,6 +20,7 @@ started.
 
 -- ftd.desktop:
 
+
 -- ftd.column:
 width: fill-container
 
@@ -30,21 +31,31 @@ width: fill-container
   [Sign In](https://github.com/login) 
   to your GitHub account.
 
-  [Read more about GitHub](https://fastn.com/book/github/)
+-- ftd.text: Read more about GitHub
+link: https://fastn.com/book/github/
+open-in-new-tab: true
+role: $inherited.types.copy-regular
+margin-bottom.px: 6
 
+-- tf.markdown:
 
 Once you are signed in, you can proceed to `Step 2`
 
 /-- ftd.image:
 src: $assets.files.images.new-user-dashboard.png
-width.fixed.px: 750
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
 margin-vertical.px: 16
 
 
+-- ftd.column:
+width: fill-container
+
 -- tf.h3: `Step 2`: Add business card template to GitHub
+
+
 
 -- ftd.row:
 width: fill-container
@@ -70,13 +81,6 @@ open-in-new-tab: true
 
 
 
-
-
-
--- ftd.column:
-width: fill-container
-
-
 -- tf.markdown:
 
 - Give a repository name and click on `Create repository` button 
@@ -84,37 +88,11 @@ width: fill-container
   (*repository name examples*: business-card, my-card, my-business-card, etc.)
 
 
--- ftd.image:
-src: $assets.files.images.create-your-repo.png
-width.fixed.px: 750
-border-radius.px: 10
-border-width.px: 1
-border-color: $inherited.colors.border
-margin-vertical.px: 16
-
--- end: ftd.column
-
-
-
-
-
--- ftd.column:
-width: fill-container
-
--- tf.markdown:
-
-As you can see, your repository is created using the template called
-`fastn-community/business-card-template`.
-
-
-For a user who has just signed-up on GitHub or signed-in but never created 
-any repository will not see the template, instead they will see the following:
-
-In both cases, Give a repository name and click on `Create repository` button
+If you are new GitHub user, you will see following:
 
 -- ftd.image:
 src: $assets.files.images.new-user-view.png
-width.fixed.px: 750
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
@@ -122,6 +100,21 @@ margin-vertical.px: 16
 
 
 -- tf.markdown: 
+
+If you a user that has already worked on GitHub you will see following:
+
+-- ftd.image:
+src: $assets.files.images.create-your-repo.png
+width.fixed.px: 800
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+margin-vertical.px: 16
+
+
+-- tf.markdown:
+
+In both cases, Give a repository name and click on `Create repository` button
 
 As soon as it creates the repository you will see the page that will display 
 the repository name along with the template name. You will have various tabs.
@@ -131,7 +124,7 @@ In the first tab ie. `Code` you can find all the files and folders.
 
 -- ftd.image:
 src: $assets.files.images.repo-home-page.png
-width.fixed.px: 750
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
@@ -139,12 +132,6 @@ margin-vertical.px: 16
 
 
 -- end: ftd.column
-
-
-
-
-
-
 
 
 
@@ -160,6 +147,16 @@ margin-vertical.px: 16
 
 - Go to `Settings` from the list of the tabs
 
+-- ftd.image:
+src: $assets.files.images.gh-page-deployment.png
+width.fixed.px: 800
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+margin-vertical.px: 16
+
+-- tf.markdown:
+
 - Select `Pages` from Table of Content
 
 - Under Branch, click on the drop-down and select `gh-pages`
@@ -168,25 +165,30 @@ margin-vertical.px: 16
 
 This will build your GitHub pages and deploy your website.
 
+To verify, go to `Actions` tab (fourth tab), and you will see the `pages build 
+and deployment` workflow executes. 
 
 
 -- ftd.image:
-src: $assets.files.images.gh-page-deployment.png
-width.fixed.px: 750
+src: $assets.files.images.actions-tab.png
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
 margin-vertical.px: 16
 
-
 -- tf.markdown:
 
-- Once it's complete, you will find your live site as shown in the following image. To see your business card click on the button `Visit site`.
+- Once you see the green tick, go back to `Settings > Pages`
+
+
+- At the top, you will find your live site as shown in the following image. 
+  To see your business card click on the button `Visit site`.
 
 
 -- ftd.image:
 src: $assets.files.images.live-site.png
-width.fixed.px: 750
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
@@ -195,6 +197,20 @@ margin-vertical.px: 16
 -- tf.markdown:
 
 In the new tab you can see the default business card.
+
+-- ftd.image:
+src: $assets.files.images.live-default-card.png
+width.fixed.px: 800
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+margin-vertical.px: 16
+
+
+-- end: ftd.column
+
+
+
 
 
 
@@ -210,7 +226,7 @@ section.
 
 -- ftd.image:
 src: $assets.files.images.about-section.png
-width.fixed.px: 750
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
@@ -228,8 +244,17 @@ To do that follow the steps:
 
 - Select the checkbox `Use your GitHub Pages website` just below second field 
 
-- Click on `Save`
+-- ftd.image:
+src: $assets.files.images.select-checkbox.png
+width.fixed.px: 800
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+margin-vertical.px: 16
 
+-- tf.markdown:
+
+- Click on `Save changes`
 
 
 -- tf.markdown:
@@ -245,14 +270,16 @@ border-color: $inherited.colors.border
 margin-vertical.px: 16
 
 
-
 -- end: ftd.column
+
+
+
+
 
 
 
 -- ftd.column:
 width: fill-container
-
 
 -- tf.h3: `Step 5`: Personalise the business card
 
@@ -265,7 +292,7 @@ To personalise the card with your information:
 
 -- ftd.image:
 src: $assets.files.images.edit-index-ftd.png
-width.fixed.px: 750
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
@@ -299,7 +326,7 @@ You can remove the property entirely if you do not wish to provide that data.
 
 -- ftd.image:
 src: $assets.files.images.personalise-the-card.png
-width.fixed.px: 750
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
@@ -328,6 +355,7 @@ width: fill-container
 margin-vertical.px: 16
 
 -- tf.h3: `Step 6`: Upload your logo
+id: upload-your-logo
 
 The output still has the default logo, so now we will personalise the logo.
 
@@ -339,7 +367,7 @@ folder where we can upload our logo file.
 
 -- ftd.image:
 src: $assets.files.images.open-assets-folder.png
-width.fixed.px: 750
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
@@ -353,12 +381,11 @@ margin-vertical.px: 16
 
 -- ftd.image:
 src: $assets.files.images.upload-logo.png
-width.fixed.px: 750
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
 margin-vertical.px: 16
-
 
 
 -- tf.markdown:
@@ -373,7 +400,7 @@ margin-vertical.px: 16
 
 -- ftd.image:
 src: $assets.files.images.commit-uploaded-logo.png
-width.fixed.px: 750
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
@@ -387,21 +414,15 @@ There you go you have your personalised business card ready.
 -- end: ftd.column
 
 
-
-
 -- tf.h3: Final Output
 
 -- ftd.image:
 src: $assets.files.images.personalised-card.png
-width.fixed.px: 750
+width: fill-container
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
 margin-vertical.px: 16
-
-
--- end: ftd.column
-
 
 
 

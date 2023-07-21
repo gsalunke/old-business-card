@@ -40,7 +40,7 @@ Build a new stand-alone business card from scratch
 
 -- site-doc.button: Create a site with business card
 link: create/
-secondary: true
+
 
 -- end: ftd.column
 
