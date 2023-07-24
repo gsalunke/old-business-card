@@ -215,7 +215,7 @@ margin-vertical.px: 16
 width: fill-container
 margin-vertical.px: 16
 
--- tf.h3: `Step 4`: Improve the URL accessibility [Optional] 
+-- tf.h3: `Step 4`: Add the URL to the `About` section [Optional] 
 
 To make your website easily accessible, we recommend adding your live URL to 
 the `About` section under the `Code` tab (first tab)
