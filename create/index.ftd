@@ -81,7 +81,7 @@ open-in-new-tab: true
 
 -- tf.markdown:
 
-If you are new GitHub, you will see this page:
+If you are new to GitHub, you will see this page:
 
 -- ftd.image:
 src: $assets.files.images.new-user-view.png
@@ -258,7 +258,7 @@ margin-vertical.px: 16
 
 -- tf.markdown:
 
-Now, your website can be accessed from the `About` section itself.
+Now, your website can be accessed from the `About` section.
 
 -- ftd.image:
 src: $assets.files.images.updated-about-section.png
@@ -367,7 +367,7 @@ margin-vertical.px: 16
 width: fill-container
 margin-vertical.px: 16
 
--- tf.h3: `Step 6`: Upload your logo
+-- tf.h3: `Step 6`: Add your logo to business card
 id: upload-your-logo
 
 As you can see, your live site still has the default logo, so let's personalize 
@@ -424,7 +424,7 @@ margin-vertical.px: 16
 
 -- tf.markdown: 
 
-- Navigate to and open the `index.ftd` file
+- Open the `index.ftd` file
 
 - Click on `edit` icon to make the `index.ftd` file editable. 
 
@@ -452,7 +452,7 @@ is open
 
 - Refresh the browser to see the updated logo
 
-There you have it - you personalised business card is now ready!
+There you have it - your personalised business card is now ready!
 
 -- end: ftd.column
 
