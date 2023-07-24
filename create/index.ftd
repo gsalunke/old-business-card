@@ -287,7 +287,7 @@ To personalise the card with your information, follow these steps:
 - Open the `index.ftd` file from the list of files and folders in the `Code` 
 tab (first tab)
 
-- Click on the `edit` icon to make the `index.ftd` file editable
+- Click on the `edit` icon (as shown below) to make the `index.ftd` file editable
 
 
 -- ftd.image:
@@ -370,8 +370,8 @@ margin-vertical.px: 16
 -- tf.h3: `Step 6`: Upload your logo
 id: upload-your-logo
 
-As you can see, your live site still has the default logo, so in this step you 
-will learn how to add your logo.
+As you can see, your live site still has the default logo, so let's personalize 
+it with your logo
 
 It's recommended to keep your logo file in one location. In our case, we will 
 use the `assets` folder to store the logo file.
@@ -391,8 +391,11 @@ margin-vertical.px: 16
 
 -- tf.markdown:
 
-- Click on `Add file` and choose `Upload files` option
+- Click on `Add file` and choose `Upload files` option. Upload your logo file 
+(eg., fastn.svg)
 
+  `NOTE`: file name and extension can be anything for eg: *abc.png*, 
+  *pqr.jpeg*, *xyz.svg*
 
 -- ftd.image:
 src: $assets.files.images.upload-logo.png
@@ -405,12 +408,10 @@ margin-vertical.px: 16
 
 -- tf.markdown:
 
-- Upload the file (in my case, file name is `fastn.svg`)
 
-  `NOTE`: file name and extension can be anything for eg: *abc.png*, 
-  *pqr.jpeg*, *xyz.svg*
+  
 
-- Once uploaded, commit your changes.
+- Once you have uploaded the logo file, commit your changes.
 
 
 -- ftd.image:
@@ -419,12 +420,27 @@ width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
+margin-vertical.px: 16
 
 -- tf.markdown: 
 
-Go back to the browser tab where your site is open and refresh the browser.
+- Navigate to and open the `index.ftd` file
 
-There you go you have your personalised business card ready.
+- Click on `edit` icon to make the `index.ftd` file editable. 
+
+  Now, replace the default logo file name with your logo file name and click 
+  `Commit changes.`
+
+- Go to the `Actions` tab (fourth tab) and wait for the new workflows to 
+complete.
+
+- Once you see the green tick on `pages build and deployment` workflow 
+indicating successful deployment, you can go to the browser where the live site 
+is open.
+
+- Refresh the browser to see the updated logo
+
+There you have it - you personalised business card is now ready.
 
 -- end: ftd.column
 
