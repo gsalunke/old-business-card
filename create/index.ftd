@@ -26,20 +26,19 @@ width: fill-container
 
 -- tf.h3: `Step 1`: Sign Up or Sign In on GitHub
 
-If you don't already have a GitHub account, [Sign Up](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
-to create one. 
+- If you don't already have a GitHub account, [Sign Up](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
+to create one 
 
-If you have an existing account, simply [Sign In](https://github.com/login).
+- If you have an existing account, simply [Sign In](https://github.com/login)
 
--- ftd.text: Read more about GitHub
+- Once you have successfully signed in, you can proceed to `Step 2`
+
+-- ftd.text: Click to know more about GitHub
 link: https://fastn.com/book/github/
 open-in-new-tab: true
 role: $inherited.types.copy-regular
 margin-vertical.px: 6
 
--- tf.markdown:
-
-Once you have successfully signed in, you can proceed to `Step 2`
 
 /-- ftd.image:
 src: $assets.files.images.new-user-dashboard.png
@@ -218,8 +217,8 @@ margin-vertical.px: 16
 
 -- tf.h3: `Step 4`: Improve the URL accessibility [Optional] 
 
-To make your website easily accessible, we recommend adding your URL to the 
-`About` section.
+To make your website easily accessible, we recommend adding your live URL to 
+the `About` section under the `Code` tab (first tab)
 
 
 -- ftd.image:
@@ -238,7 +237,8 @@ Here's how you can do it:
 
 - Open the first tab, i.e., `Code`
 
-- Click on the `Settings` icon (⚙️) in the `About` section
+- Click on the `Settings` icon (⚙️) in the `About` section (as shown in the
+ above image ⬆️)
 
 - Select the checkbox `Use your GitHub Pages website` just below the second 
 field 
@@ -258,7 +258,7 @@ margin-vertical.px: 16
 
 -- tf.markdown:
 
-Now, your website can be accessed from the `About` section.
+Now, your website can be accessed from the `About` section itself.
 
 -- ftd.image:
 src: $assets.files.images.updated-about-section.png
@@ -346,6 +346,15 @@ browser tab where your live site is running
 - Refresh the browser to see the updated business card
 
 
+-- ftd.image:
+src: $assets.files.images.personalised-card.png
+width.fixed.px: 800
+border-radius.px: 10
+border-width.px: 1
+border-color: $inherited.colors.border
+margin-vertical.px: 16
+
+
 -- end: ftd.column
 
 
@@ -423,7 +432,7 @@ There you go you have your personalised business card ready.
 -- tf.h3: Final Output
 
 -- ftd.image:
-src: $assets.files.images.personalised-card.png
+src: $assets.files.images.final-output.png
 width: fill-container
 border-radius.px: 10
 border-width.px: 1
