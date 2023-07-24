@@ -30,7 +30,7 @@ You can find all your projects under `Repositories` in GitHub
 
 -- tf.h3: `Step 3:` Navigate to the `FASTN.ftd` document 
 
-- Open the `FASTN.ftd` file of the selected project
+- Navigate to and open the `FASTN.ftd` file of the selected project
 
 -- ftd.image:
 src: $assets.files.images.navigate-to-fastn.png
@@ -42,7 +42,7 @@ margin-vertical.px: 16
 
 -- tf.markdown:
 
-- Click on the `Edit` icon to make the file editable
+- Click on the `edit` icon (as shown below) to make the file editable
 
 -- ftd.image:
 src: $assets.files.images.edit-fastn-file.png
