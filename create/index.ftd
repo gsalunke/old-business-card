@@ -55,9 +55,9 @@ width: fill-container
 
 -- tf.h3: `Step 2`: Add the business card template to GitHub
 
-After signing in, when you click on the below button, the business card 
-template will add to your repository that you will create in following steps: 
-
+After signing in, the next step is to add the business card template to your
+repository. Simply click on the button below and follow the steps, and the
+template will be added to your repository.
 
 -- ftd.row:
 width: fill-container
