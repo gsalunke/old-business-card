@@ -10,12 +10,8 @@ github-url: https://github.com/fastn-community/business-card
 site-title: Create a site with Business Card
 
 
-This guide is for anyone who wants to create their own business card from
-scratch. 
-
-The entire process runs on the browser. So simply follow the steps to get 
-started.
-
+This step-by-step guide will walk you through the process of building your
+business card from scratch, all within your browser. Let's get started!
 
 
 -- ftd.desktop:
@@ -24,14 +20,19 @@ started.
 -- ftd.column:
 width: fill-container
 
--- tf.h3: `Step 1`: Sign Up or Sign In on GitHub
+-- tf.h3: `Step 1`: Sign Up or Sign In on `GitHub`
 
-- If you don't already have a GitHub account, [Sign Up](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
-to create one 
+`GitHub` is an online collaboration platform where we have put our
+`business-card-template`. 
+Once you Sign In on GitHub you will be able to add the template and 
+use it to create your personalised business card.
 
-- If you have an existing account, simply [Sign In](https://github.com/login)
+- It's simple to create an account. Just click [Sign Up](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
+and follow the instructions.
 
-- Once you have successfully signed in, you can proceed to `Step 2`
+- If you have an existing account, simply [Sign In](https://github.com/login).
+
+- Once you have successfully signed in, you can proceed to `Step 2`.
 
 -- ftd.text: Click to know more about GitHub
 link: https://fastn.com/book/github/
@@ -54,6 +55,10 @@ width: fill-container
 
 -- tf.h3: `Step 2`: Add the business card template to GitHub
 
+After signing in, when you click on the below button, a new tab will open where 
+you will be able to create a new repository that adds the business card 
+template to that repository.
+
 
 -- ftd.row:
 width: fill-container
@@ -61,7 +66,7 @@ align-content: left
 
 -- tf.markdown:
 
-- Click on the button to add the template 👉
+- Click on the button to add the template to your repository 👉
 
 -- ftd.column:
 width: fill-container
@@ -141,7 +146,11 @@ margin-vertical.px: 16
 
 -- tf.h3: `Step 3`: Generate a live site
 
-- Go to `Settings` from the list of tabs
+With the fastn Business Card Template in your repository, it's time to see your
+business card go live on the web with just a few clicks. 
+
+
+- Go to `Settings` (last tab) from the list of tabs
 
 -- ftd.image:
 src: $assets.files.images.gh-page-deployment.png
@@ -155,9 +164,10 @@ margin-vertical.px: 16
 
 - Select `Pages` from the Table of Content
 
-- Under `Branch`, click on the drop-down and choose `gh-pages`
+- Under `Branch`, click on the drop-down and choose `gh-pages` (*by default*:
+  None)
 
-- Click on `Save`
+- Click on `Save` button
 
 This action will build your GitHub pages and deploy your website.
 
@@ -217,7 +227,7 @@ margin-vertical.px: 16
 
 -- tf.h3: `Step 4`: Add the URL to the `About` section [Optional] 
 
-To make your website easily accessible, we recommend adding your live URL to 
+For easy access to your website, we recommend adding your live URL to 
 the `About` section under the `Code` tab (first tab)
 
 
@@ -258,7 +268,8 @@ margin-vertical.px: 16
 
 -- tf.markdown:
 
-Now, your website can be accessed from the `About` section.
+Now, your website can be accessed from the `About` section. This also helps 
+others to see the website if they visit your repository.
 
 -- ftd.image:
 src: $assets.files.images.updated-about-section.png
@@ -282,7 +293,9 @@ width: fill-container
 
 -- tf.h3: `Step 5`: Personalise the business card
 
-To personalise the card with your information, follow these steps:
+Now comes the exciting part - personalizing your business card. With just a few
+simple edits, you can transform the default card into your personal business
+card.
 
 - Open the `index.ftd` file from the list of files and folders in the `Code` 
 tab (first tab)
@@ -370,13 +383,14 @@ margin-vertical.px: 16
 -- tf.h3: `Step 6`: Add your logo to business card
 id: upload-your-logo
 
-As you can see, your live site still has the default logo, so let's personalize 
-it with your logo
+Your business card is almost complete! 
 
-It's recommended to keep your logo file in one location. In our case, we will 
-use the `assets` folder to store the logo file.
+As you can see, your live site still has the default logo, so let's personalize
+it with your logo.
 
-Follow the steps below to add your logo:
+First, upload your logo to your repository. It's recommended to keep your logo
+file in one location. In our case, we will use the `assets` folder to store the
+logo file.
 
 - Go to the `Code` tab (first tab) and open the `assets` folder
 
@@ -408,9 +422,6 @@ margin-vertical.px: 16
 
 -- tf.markdown:
 
-
-  
-
 - Once you have uploaded the logo file, commit your changes.
 
 
@@ -423,6 +434,8 @@ border-color: $inherited.colors.border
 margin-vertical.px: 16
 
 -- tf.markdown: 
+
+Now, moving to the second part, update the logo in the `index.ftd`:
 
 - Open the `index.ftd` file
 
@@ -452,7 +465,7 @@ is open
 
 - Refresh the browser to see the updated logo
 
-There you have it - your personalised business card is now ready!
+There you have it - your personalized business card is now ready!
 
 -- end: ftd.column
 
