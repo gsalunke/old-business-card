@@ -55,9 +55,8 @@ width: fill-container
 
 -- tf.h3: `Step 2`: Add the business card template to GitHub
 
-After signing in, when you click on the below button, a new tab will open where 
-you will be able to create a new repository that adds the business card 
-template to that repository.
+After signing in, when you click on the below button, the business card 
+template will add to your repository that you will create in following steps: 
 
 
 -- ftd.row:
@@ -435,7 +434,7 @@ margin-vertical.px: 16
 
 -- tf.markdown: 
 
-Now, moving to the second part, update the logo in the `index.ftd`:
+Now, update the logo in the `index.ftd`, by following these steps:
 
 - Open the `index.ftd` file
 
