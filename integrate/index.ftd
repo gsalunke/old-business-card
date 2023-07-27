@@ -30,7 +30,7 @@ You can find the fastn repository under `Repositories` on GitHub
 
 -- tf.h3: `Step 3:` Navigate to the `FASTN.ftd` document 
 
-- Navigate to and open the `FASTN.ftd` file of the selected project
+- Navigate to the `FASTN.ftd` file of the selected project and open it.
 
 -- ftd.image:
 src: $assets.files.images.navigate-to-fastn.png
