@@ -8,25 +8,25 @@ show-tabs: false
 github-url: https://github.com/fastn-community/business-card
 site-title: Add Business Card to `fastn` site
 
-This guide is for anyone who wants to `integrate` their personalised business 
-card into their existing `fastn project` available on GitHub.  
+This step-by-step guide will help you to `integrate` your personalised 
+business card into your existing `fastn repository` on GitHub. 
+This entirely runs on the browser. Simply follow along the steps to integrate.
 
-This entirely runs on the browser. Simply follow along the steps to intgrate.
 
 -- ftd.desktop:
 
 -- ftd.column:
 width: fill-container
 
--- tf.h3: `Step 1:` Log In to your GitHub account
+-- tf.h3: `Step 1:` Sign In to your GitHub account
 
-- [Log In]((https://github.com/login)) to your GitHub account to access your `fastn project`
+- [Sign In]((https://github.com/login)) to your GitHub account to access your `fastn repository`
 
--- tf.h3: `Step 2:` Identify the existing `fastn project` on GitHub
+-- tf.h3: `Step 2:` Identify the existing `fastn repository` on GitHub
 
-- Select the existing `fastn project` on GitHub to which you want to integrate the business card
+- Select the existing `fastn repository` on GitHub to which you want to integrate the business card
 
-You can find all your projects under `Repositories` in GitHub
+You can find the fastn repository under `Repositories` on GitHub
 
 -- tf.h3: `Step 3:` Navigate to the `FASTN.ftd` document 
 
@@ -210,7 +210,7 @@ margin-vertical.px: 16
 Pages` or if you have already added it in the `About` section in the first 
 tab(Code tab)
 
-You will be able to see the default business card in your fastn project. 
+You will be able to see the default business card in your fastn repository. 
 
 -- ftd.image:
 src: $assets.files.images.default-business-card.png
