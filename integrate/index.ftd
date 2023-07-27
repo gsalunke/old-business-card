@@ -34,7 +34,7 @@ You can find the fastn repository under `Repositories` on GitHub
 
 -- ftd.image:
 src: $assets.files.images.navigate-to-fastn.png
-width.fixed.px: 750
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
@@ -46,7 +46,7 @@ margin-vertical.px: 16
 
 -- ftd.image:
 src: $assets.files.images.edit-fastn-file.png
-width.fixed.px: 750
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
@@ -68,7 +68,7 @@ lang: ftd
 
 -- ftd.image:
 src: $assets.files.images.add-dependency.png
-width.fixed.px: 750
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
@@ -83,7 +83,7 @@ A pop-up will appear.
 
 -- ftd.image:
 src: $assets.files.images.commit-popup.png
-width.fixed.px: 750
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
@@ -95,7 +95,7 @@ You can check the Commit message and other details on the commit status bar
 
 -- ftd.image:
 src: $assets.files.images.status-bar.png
-width.fixed.px: 750
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
@@ -108,7 +108,7 @@ margin-vertical.px: 16
 
 -- ftd.image:
 src: $assets.files.images.green-tick.png
-width.fixed.px: 750
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
@@ -126,7 +126,7 @@ margin-vertical.px: 16
 
 -- ftd.image:
 src: $assets.files.images.navigate-ftd-doc.png
-width.fixed.px: 750
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
@@ -162,7 +162,7 @@ margin-vertical.px: 6
 
 -- ftd.image:
 src: $assets.files.images.import-in-ftd.png
-width.fixed.px: 750
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
@@ -197,7 +197,7 @@ In my case, I have added in between of the document after the third paragraph.
 
 -- ftd.image:
 src: $assets.files.images.paste-business-card.png
-width.fixed.px: 750
+width.fixed.px: 800
 border-radius.px: 10
 border-width.px: 1
 border-color: $inherited.colors.border
