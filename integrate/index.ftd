@@ -30,7 +30,7 @@ You can find the fastn repository under `Repositories` on GitHub
 
 -- tf.h3: `Step 3:` Navigate to the `FASTN.ftd` document 
 
-- Navigate to the `FASTN.ftd` file of the selected project and open it.
+- Navigate to the `FASTN.ftd` file of the selected project and click to open it.
 
 -- ftd.image:
 src: $assets.files.images.navigate-to-fastn.png
@@ -121,8 +121,8 @@ margin-vertical.px: 16
 - Open the document to which you want to integrate the business card and 
   display in the browser 
 
-  For example: In my case, I want to integrate business card in `index.ftd` 
-  file
+  For example: If you want to integrate business card in `index.ftd` file, 
+  open it. 
 
 -- ftd.image:
 src: $assets.files.images.navigate-ftd-doc.png
@@ -134,10 +134,10 @@ margin-vertical.px: 16
 
 -- tf.markdown:
 
-- Click on the `Edit` icon to make the file editable
+- Click on the `Edit` icon to make the selected `.ftd` file editable
 
 
--- tf.h3: `Step 6:` Add below line inside your `ftd` file
+-- tf.h3: `Step 6:` Add below line inside your `.ftd` file
 
 - Copy the following import line
 
@@ -148,12 +148,17 @@ lang: ftd
 
 -- tf.markdown:
 
-- Paste the import line at the top of the `ftd` file.
+- Paste the import line at the top of the file.
 
 If this is the only import line, then it goes at line 1 else it can be placed 
 below other already imported lines.
 
-To read why to import at the top, [Click Here](https://fastn.com/import-at-top)
+-- ftd.text: Click Here to read - Benefits of importing packages at the top
+link: https://fastn.com/import-at-top/
+open-in-new-tab: true
+role: $inherited.types.copy-regular
+margin-vertical.px: 6
+
 
 -- ftd.image:
 src: $assets.files.images.import-in-ftd.png
