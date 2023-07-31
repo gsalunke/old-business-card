@@ -52,10 +52,11 @@ margin-vertical.px: 16
 -- ftd.column:
 width: fill-container
 
--- tf.h3: `Step 2`: Add the business card template to GitHub
+-- tf.h3: `Step 2`: Create a repository using business card template
 
-After signing in, you're ready to add the business card template to your 
-repository. Simply click on the button below and follow the steps.
+After signing in, you're ready to create a repository using the business card
+template. Simply click on the button below to add the template and follow the
+steps.
 
 
 -- ftd.column:
