@@ -1,227 +1,5 @@
 -- import: fastn-community.github.io/business-card
 
-;; home - for business card
-;; how to use - for business card documentation components
-
-;; home - for card component
-;; how to use - card component
-
--- component how-to-use:
-caption name:
-string package-name: business-card
-string deployed-url: fastn-community.github.io/business-card
-optional string license-url:
-module c: business-card
-optional string company-name:
-optional string company-slogan: If you can type you can code
-optional ftd.image-src qr-code:
-optional string title:
-optional string phone-no:
-optional string email:
-optional string address:
-optional ftd.image-src logo: $assets.files.assets.ipsum-logo.svg
-optional ftd.image-src avatar:
-optional string github:
-
--- site-doc.doc-home: $concat2(a = fastn-package:, b = $how-to-use.package-name)
-license-url if { how-to-use.license-url != NULL }: $how-to-use.license-url
-current-package: $how-to-use.deployed-url
-show-tabs: false
-site-title: $how-to-use.package-name
-
-The `business-card` package can be used to create your web business card. Using
-our [business-card-template](https://github.com/fastn-community/business-card-template)
-you can create your own [fastn](https://fastn.com) business card.
-
-If you have GitHub account then its very easy for you to create your own
-business card design. Even if you don't have a GitHub account then just
-[click here](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
-to create it.
-
-[Click here](https://github.com/fastn-community/business-card-template) to
-create your own business-card using our business-card-template.
-
--- site-doc.output:
-
--- site-doc.header: Business Card - front
-
--- how-to-use.c.front: $how-to-use.name
-title: $how-to-use.title
-phone-no: $how-to-use.phone-no
-email: $how-to-use.email
-address: $how-to-use.address
-logo: $how-to-use.logo
-company-name: $how-to-use.company-name
-avatar: $how-to-use.avatar
-company-slogan: $how-to-use.company-slogan
-qr-code: $how-to-use.qr-code
-
-
--- site-doc.header: `front` component
-
-Below mentioned is the business card `front` definition details which needs to be
-implemented.
-
--- cb.code: front definition
-lang: ftd
-
-\-- component front:
-caption name:
-optional string company-name:
-optional string title:
-optional string phone-no:
-optional string email:
-optional string address:
-optional ftd.image-src logo:
-optional ftd.image-src avatar:
-optional string company-slogan:
-optional ftd.image-src qr-code:
-
-\;; <YOUR CARD IMPLEMENTATION HERE>
-
-\-- end: front
-
-
--- site-doc.header: Business Card - back
-
--- how-to-use.c.back: $how-to-use.name
-title: $how-to-use.title
-phone-no: $how-to-use.phone-no
-email: $how-to-use.email
-address: $how-to-use.address
-logo: $how-to-use.logo
-company-name: $how-to-use.company-name
-avatar: $how-to-use.avatar
-company-slogan: $how-to-use.company-slogan
-qr-code: $how-to-use.qr-code
-
--- end: site-doc.output
-
--- site-doc.header: `back` component
-
-Below mentioned is the business card `back` definition details which needs to be
-implemented.
-
-
--- cb.code: back definition
-lang: ftd
-
-\-- component back:
-caption name:
-optional string company-name:
-optional string title:
-optional string phone-no:
-optional string email:
-optional string address:
-optional ftd.image-src logo:
-optional ftd.image-src avatar:
-optional string company-slogan:
-optional ftd.image-src qr-code:
-
-\;; <YOUR CARD-BACK IMPLEMENTATION HERE>
-
-\-- end: back
-
--- end: site-doc.doc-home
-
--- end: how-to-use
-
-
-
-
-
-
-
-
-
-
--- component home:
-caption name:
-string package-name: business-card
-string deployed-url: fastn-community.github.io/business-card
-optional string license-url:
-module c: business-card
-optional string company-name:
-optional string company-slogan:
-optional ftd.image-src qr-code:
-optional string title:
-optional string phone-no:
-optional string email:
-optional string address:
-optional ftd.image-src logo: $assets.files.assets.ipsum-logo.svg
-optional ftd.image-src avatar:
-optional string github:
-
--- site-doc.doc-home: $concat2(a = fastn-package:, b = $home.package-name)
-license-url if { home.license-url != NULL }: $home.license-url
-current-package: $home.deployed-url
-show-tabs: false
-site-title: $home.package-name
-
-Business card typically include essential information such as the person's or
-company's name, job title, phone number, email address, and physical address.
-
-Additionally, business cards may feature a company logo, website URL, social
-media handles, and a brief description of the individual's or company's
-offerings, company slogan etc.
-
--- site-doc.header: How to use
-
--- cb.code: Add dependency into your FASTN.ftd
-lang: ftd
-
-\-- fastn.dependency: fastn-community.github.io/business-card
-
--- site-doc.header: Business Card - front
-
--- home.c.front: $home.name
-title: $home.title
-phone-no: $home.phone-no
-email: $home.email
-address: $home.address
-logo: $home.logo
-company-slogan: $home.company-slogan
-qr-code: $home.qr-code
-
--- cb.code: Import `business-card` into your `.ftd` file
-lang: ftd
-
-\-- import: fastn-community.github.io/business-card
-
-\-- business-card.ftont:  John Doe
-title: Software Developer
-phone-no: +123-4567890
-email: john@xyz.com
-address: 123 Anywhere, Any City
-logo: $assets.files.assets.ipsum-logo.svg
-
--- site-doc.header: Business Card - back
-
--- home.c.back: $home.name
-title: $home.title
-phone-no: $home.phone-no
-email: $home.email
-address: $home.address
-logo: $home.logo
-company-slogan: $home.company-slogan
-qr-code: $home.qr-code
-
--- cb.code: Import `business-card` into your `.ftd` file
-lang: ftd
-
-\-- import: fastn-community.github.io/business-card
-
-\-- business-card.back: 
-logo: $assets.files.assets.ipsum-logo.svg
-company-slogan: If you can type you can code
-
--- end: site-doc.doc-home
-
--- end: home
-
-
-
-
 
 
 
@@ -229,60 +7,56 @@ company-slogan: If you can type you can code
 
 
 -- component home-card:
-caption name:
 string package-name: business-card
 string package-full-name: fastn-community.github.io/business-card
 string license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
-module c: business-card
-optional string company-name:
-optional string company-slogan: If you can type you can code
-optional ftd.image-src qr-code:
-optional string title:
-optional string phone-no:
-optional string email:
-optional string address:
-optional ftd.image-src logo: $assets.files.assets.ipsum-logo.svg
-optional ftd.image-src avatar:
-optional string github:
-optional string website:
+string github: https://github.com/fastn-community/business-card
+module category: business-card
 
--- site-doc.doc-home: $concat2(a = fastn-package:, b = $home-card.package-name)
-license-url if { home-card.license-url != NULL }: $home-card.license-url
+-- site-doc.doc-home: Business Card
 current-package: $home-card.package-full-name
 show-tabs: false
-site-title: $home-card.package-name
+github-url: $home-card.github
+site-title: Business Card
 
--- site-doc.output:
+This guide will demonstrate how to make simple business cards using `fastn`.
 
--- tf.h1: Card Front
+`fastn` is a beginner friendly web-development platform.
+Check out [`fastn`](https://fastn.com/).
 
--- home-card.c.front: $home-card.name
-title: $home-card.title
-phone-no: $home-card.phone-no
-email: $home-card.email
-address: $home-card.address
-logo: $home-card.logo
-company-name: $home-card.company-name
-avatar: $home-card.avatar
-company-slogan: $home-card.company-slogan
-qr-code: $home-card.qr-code
-website: $home-card.website
+-- business-card.details: John Doe
+company: John Doe Pvt. Ltd.
+title: Software Developer
+contact-1: +91 12345 99999
+contact-2: +91 12345 88888
+website-1: john@johndoe.com
+location: 123, Block No. A-123, Times Square, Bangalore - 123456
+logo: $assets.files.assets.ipsum-logo.svg
+company-slogan: If you can type you can code
+website-2: www.johndoe.com
 
--- tf.h1: Card Back
+-- site-doc.header: How to use
 
--- home-card.c.back: $home-card.name
-title: $home-card.title
-phone-no: $home-card.phone-no
-email: $home-card.email
-address: $home-card.address
-logo: $home-card.logo
-company-name: $home-card.company-name
-avatar: $home-card.avatar
-company-slogan: $home-card.company-slogan
-qr-code: $home-card.qr-code
-website: $home-card.website
+-- cb.code: $concat3(a = Add, b = $home-card.package-full-name, c = dependency into your FASTN.ftd)
+lang: ftd
 
--- end: site-doc.output
+$concat2(a = -- fastn.dependency:, b = $home-card.package-full-name)
+
+-- cb.code: Sample usage
+lang: ftd
+
+\-- import: fastn-community.github.io/business-card
+
+\-- business-card.details: John Doe
+company: John Doe Pvt. Ltd.
+title: Software Developer
+contact-1: +91 12345 99999
+contact-2: +91 12345 88888
+website-1: john@johndoe.com
+location: 123, Block No. A-123, Times Square, Bangalore - 123456
+logo: $assets.files.assets.ipsum-logo.svg
+company-slogan: If you can type you can code
+website-2: www.johndoe.com
 
 -- end: site-doc.doc-home
 
@@ -298,23 +72,11 @@ website: $home-card.website
 
 
 -- component how-to-use-card:
-caption name:
 string package-name: business-card
 string package-full-name: fastn-community.github.io/business-card
 string license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
-module c: business-card
-optional string company-name:
-optional string company-slogan: 
-optional ftd.image-src qr-code:
-optional string title:
-optional string phone-no:
-optional string email:
-optional string address:
-optional ftd.image-src logo: $assets.files.assets.ipsum-logo.svg
-optional ftd.image-src avatar:
-optional string github:
-optional string website:
-string sample-code:
+string github: https://github.com/fastn-community/business-card
+module category: business-card
 
 -- site-doc.doc-home: Documentation - Card
 site-title: $how-to-use-card.package-name
@@ -335,21 +97,118 @@ $concat2(a = -- fastn.dependency:, b = $how-to-use-card.package-full-name)
 -- cb.code: Sample usage
 lang: ftd
 
-$how-to-use-card.sample-code
+\-- import: fastn-community.github.io/business-card
+
+\-- business-card.details: John Doe
+company: John Doe Pvt. Ltd.
+title: Software Developer
+contact-1: +91 12345 99999
+contact-2: +91 12345 88888
+website-1: john@johndoe.com
+location: 123, Block No. A-123, Times Square, Bangalore - 123456
+logo: $assets.files.assets.ipsum-logo.svg
+company-slogan: If you can type you can code
+website-2: www.johndoe.com
 
 -- site-doc.header: Preview
 
--- how-to-use-card.c.front: $how-to-use-card.name
-title: $how-to-use-card.title
-phone-no: $how-to-use-card.phone-no
-email: $how-to-use-card.email
-address: $how-to-use-card.address
-logo: $how-to-use-card.logo
-company-name: $how-to-use-card.company-name
-avatar: $how-to-use-card.avatar
-company-slogan: $how-to-use-card.company-slogan
-qr-code: $how-to-use-card.qr-code
-website: $how-to-use-card.website
+-- business-card.details: John Doe
+title: Software Developer
+company: John Doe Pvt. Ltd.
+logo: $assets.files.assets.ipsum-logo.svg
+contact-1: +91 12345 99999
+contact-2: +91 12345 88888
+website-1: john@johndoe.com
+website-2: www.johndoe.com
+location: 123, Block No. A-123, Times Square, Bangalore - 123456
+company-slogan: If you can type you can code
+
+-- site-doc.header: Card Variants
+
+-- ftd.text: Preview with no address
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+
+-- business-card.details: John Doe
+title: Software Developer
+company: John Doe Pvt. Ltd.
+logo: $assets.files.assets.ipsum-logo.svg
+contact-1: +91 12345 99999
+contact-2: +91 12345 88888
+website-1: john@johndoe.com
+website-2: www.johndoe.com
+company-slogan: If you can type you can code
+
+-- cb.code: Sample code
+lang: ftd
+
+\-- import: fastn-community.github.io/business-card
+
+\-- business-card.details: John Doe
+title: Software Developer
+company: John Doe Pvt. Ltd.
+logo: $assets.files.assets.ipsum-logo.svg
+contact-1: +91 12345 99999
+contact-2: +91 12345 88888
+website-1: john@johndoe.com
+website-2: www.johndoe.com
+company-slogan: If you can type you can code
+
+-- ftd.text: Preview with single contact
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+
+-- business-card.details: John Doe
+title: Software Developer
+company: John Doe Pvt. Ltd.
+logo: $assets.files.assets.ipsum-logo.svg
+contact-1: +91 12345 99999
+website-1: john@johndoe.com
+website-2: www.johndoe.com
+location: 123, Block No. A-123, Times Square, Bangalore - 123456
+company-slogan: If you can type you can code
+
+-- cb.code: Sample code
+lang: ftd
+
+\-- import: fastn-community.github.io/business-card
+
+\-- business-card.details: John Doe
+title: Software Developer
+company: John Doe Pvt. Ltd.
+logo: $assets.files.assets.ipsum-logo.svg
+contact-1: +91 12345 99999
+website-1: john@johndoe.com
+website-2: www.johndoe.com
+location: 123, Block No. A-123, Times Square, Bangalore - 123456
+company-slogan: If you can type you can code
+
+-- ftd.text: Preview with no company slogan (on back)
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+
+-- business-card.details: John Doe
+title: Software Developer
+company: John Doe Pvt. Ltd.
+logo: $assets.files.assets.ipsum-logo.svg
+contact-1: +91 12345 99999
+website-1: john@johndoe.com
+website-2: www.johndoe.com
+location: 123, Block No. A-123, Times Square, Bangalore - 123456
+
+-- cb.code: Sample code
+lang: ftd
+
+\-- import: fastn-community.github.io/business-card
+
+\-- business-card.details: John Doe
+title: Software Developer
+company: John Doe Pvt. Ltd.
+logo: $assets.files.assets.ipsum-logo.svg
+contact-1: +91 12345 99999
+website-1: john@johndoe.com
+website-2: www.johndoe.com
+location: 123, Block No. A-123, Times Square, Bangalore - 123456
 
 -- site-doc.header: Properties:
 
@@ -360,56 +219,53 @@ type: Caption (`required`)
 
 It's used to define the person's name for your card component.
 
--- site-doc.component-property: `company-name`
-type: String (`optional`)
-
-It's used to define the company name for your card component.
-
 -- site-doc.component-property: `title`
-type: String (`optional`)
+type: String (`required`)
 
 It's used to define the person's business title for your card component.
 
--- site-doc.component-property: `phone-no`
+-- site-doc.component-property: `company`
+type: String (`required`)
+
+It's used to define the company name for your card component.
+
+-- site-doc.component-property: `logo`
+type: ftd.image-src (`required`)
+
+It's used to define the business logo for your card component.
+
+-- site-doc.component-property: `contact-1`
 type: String (`optional`)
 
-It's used to define the person's contact number (phone number) for your card
-component.
+It's used to define the person's primary contact number (phone number) for your
+card component.
 
--- site-doc.component-property: `email`
+-- site-doc.component-property: `contact-2`
 type: String (`optional`)
 
-It's used to define the person's email address for your card component.
+It's used to define the person's secondary contact number (phone number) for
+your card component.
 
--- site-doc.component-property: `address`
+-- site-doc.component-property: `website-1`
+type: String (`optional`)
+
+It's used to define any website for your card component. (It can be the person's
+ email address.)
+
+-- site-doc.component-property: `website-2`
+type: String (`optional`)
+
+It's used to define any website for your card component.
+
+-- site-doc.component-property: `location`
 type: String (`optional`)
 
 It's used to define the person's address for your card component.
 
--- site-doc.component-property: `logo`
-type: ftd.image-src (`optional`)
-
-It's used to define the business logo for your card component.
-
--- site-doc.component-property: `avatar`
-type: ftd.image-src (`optional`)
-
-It's used to define the person's avatar for your card component.
-
 -- site-doc.component-property: `company-slogan`
 type: String (`optional`)
 
-It's used to define the company slogan for your card component.
-
--- site-doc.component-property: `qr-code`
-type: ftd.image-src (`optional`)
-
-It's used to define any external qr-code for your card component.
-
--- site-doc.component-property: `website`
-type: String (`optional`)
-
-It's used to define any website for your card component.
+It's used to define the company's slogan for your card component.
 
 -- end: site-doc.doc-home
 
@@ -419,150 +275,13 @@ It's used to define any website for your card component.
 
 
 
-
-
-
-
-
--- component how-to-use-card-back:
-optional caption name:
-string package-name: business-card
-string package-full-name: fastn-community.github.io/business-card
-string license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
-module c: business-card
-optional string company-name:
-optional string company-slogan: If you can type you can code 
-optional ftd.image-src qr-code:
-optional string title:
-optional string phone-no:
-optional string email:
-optional string address:
-optional ftd.image-src logo: $assets.files.assets.ipsum-logo.svg
-optional ftd.image-src avatar:
-optional string github:
-optional string website:
-string sample-code:
-
--- site-doc.doc-home: Documentation - Card Back
-site-title: $how-to-use-card-back.package-name
-show-tabs: false
-license-url if { how-to-use-card-back.license-url != NULL }: $how-to-use-card-back.license-url
-current-package: $how-to-use-card-back.package-full-name
-
-This is a card-back component which will render your data
-as a business card (back-view).
-
--- site-doc.header: How to use
-
--- cb.code: $concat3(a = Add, b = $how-to-use-card-back.package-name, c = dependency into your FASTN.ftd)
-lang: ftd
-
-$concat2(a = -- fastn.dependency:, b = $how-to-use-card-back.package-full-name)
-
--- cb.code: Sample usage
-lang: ftd
-
-$how-to-use-card-back.sample-code
-
--- site-doc.header: Preview
-
--- how-to-use-card-back.c.back: $how-to-use-card-back.name
-title: $how-to-use-card-back.title
-phone-no: $how-to-use-card-back.phone-no
-email: $how-to-use-card-back.email
-address: $how-to-use-card-back.address
-logo: $how-to-use-card-back.logo
-company-name: $how-to-use-card-back.company-name
-avatar: $how-to-use-card-back.avatar
-company-slogan: $how-to-use-card-back.company-slogan
-qr-code: $how-to-use-card-back.qr-code
-website: $how-to-use-card-back.website
-
--- site-doc.header: Properties:
-
-Below are details of all properties of `card-back` component.
-
--- site-doc.component-property: `name`
-type: Caption (`required`)
-
-It's used to define the person's name for your card-back component.
-
--- site-doc.component-property: `company-name`
-type: String (`optional`)
-
-It's used to define the company name for your card-back component.
-
--- site-doc.component-property: `title`
-type: String (`optional`)
-
-It's used to define the person's business title for your card-back component.
-
--- site-doc.component-property: `phone-no`
-type: String (`optional`)
-
-It's used to define the person's contact number (phone number) for your card
-component.
-
--- site-doc.component-property: `email`
-type: String (`optional`)
-
-It's used to define the person's email address for your card-back component.
-
--- site-doc.component-property: `address`
-type: String (`optional`)
-
-It's used to define the person's address for your card-back component.
-
--- site-doc.component-property: `logo`
-type: ftd.image-src (`optional`)
-
-It's used to define the business logo for your card-back component.
-
--- site-doc.component-property: `avatar`
-type: ftd.image-src (`optional`)
-
-It's used to define the person's avatar for your card-back component.
-
--- site-doc.component-property: `company-slogan`
-type: String (`optional`)
-
-It's used to define the company slogan for your card-back component.
-
--- site-doc.component-property: `qr-code`
-type: ftd.image-src (`optional`)
-
-It's used to define any external qr-code for your card-back component.
-
--- site-doc.component-property: `website`
-type: String (`optional`)
-
-It's used to define any website for your card-back component.
-
--- end: site-doc.doc-home
-
--- end: how-to-use-card-back
-
-
-
-
-
-
-
-
-
+;; ---------------------------- FUNCTIONS --------------------------------
 
 -- string concat2(a,b):
 string a:
 string b:
 
 a + " " + b
-
-
-
-
-
-
-
 
 
 
