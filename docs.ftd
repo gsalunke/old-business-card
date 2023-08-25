@@ -30,10 +30,10 @@ title: Software Developer
 contact-1: +91 12345 99999
 contact-2: +91 12345 88888
 website-1: john@johndoe.com
+website-2: www.johndoe.com
 location: 123, Block No. A-123, Times Square, Bangalore - 123456
 logo: $assets.files.assets.ipsum-logo.svg
 company-slogan: If you can type you can code
-website-2: www.johndoe.com
 
 -- site-doc.header: How to use
 
@@ -47,16 +47,16 @@ lang: ftd
 
 \-- import: fastn-community.github.io/business-card
 
-\-- business-card.details: John Doe
+\-- business-card.card: John Doe
 company: John Doe Pvt. Ltd.
 title: Software Developer
 contact-1: +91 12345 99999
 contact-2: +91 12345 88888
 website-1: john@johndoe.com
+website-2: www.johndoe.com
 location: 123, Block No. A-123, Times Square, Bangalore - 123456
 logo: $assets.files.assets.ipsum-logo.svg
 company-slogan: If you can type you can code
-website-2: www.johndoe.com
 
 -- end: site-doc.doc-home
 
@@ -99,16 +99,16 @@ lang: ftd
 
 \-- import: fastn-community.github.io/business-card
 
-\-- business-card.details: John Doe
+\-- business-card.card: John Doe
 company: John Doe Pvt. Ltd.
 title: Software Developer
 contact-1: +91 12345 99999
 contact-2: +91 12345 88888
 website-1: john@johndoe.com
+website-2: www.johndoe.com
 location: 123, Block No. A-123, Times Square, Bangalore - 123456
 logo: $assets.files.assets.ipsum-logo.svg
 company-slogan: If you can type you can code
-website-2: www.johndoe.com
 
 -- site-doc.header: Preview
 
@@ -144,7 +144,7 @@ lang: ftd
 
 \-- import: fastn-community.github.io/business-card
 
-\-- business-card.details: John Doe
+\-- business-card.card: John Doe
 title: Software Developer
 company: John Doe Pvt. Ltd.
 logo: $assets.files.assets.ipsum-logo.svg
@@ -173,7 +173,7 @@ lang: ftd
 
 \-- import: fastn-community.github.io/business-card
 
-\-- business-card.details: John Doe
+\-- business-card.card: John Doe
 title: Software Developer
 company: John Doe Pvt. Ltd.
 logo: $assets.files.assets.ipsum-logo.svg
@@ -201,7 +201,7 @@ lang: ftd
 
 \-- import: fastn-community.github.io/business-card
 
-\-- business-card.details: John Doe
+\-- business-card.card: John Doe
 title: Software Developer
 company: John Doe Pvt. Ltd.
 logo: $assets.files.assets.ipsum-logo.svg

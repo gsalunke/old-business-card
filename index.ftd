@@ -13,6 +13,55 @@ dark: black
 
 ;; ---------------------- DEFAULT CARD COMPONENTS -------------------------
 
+-- component card:
+module category: business-card
+caption name:
+string title:
+string company:
+ftd.image-src logo:
+optional string contact-1:
+optional string contact-2:
+optional string website-1:
+optional string website-2:
+optional string location:
+optional string company-slogan:
+
+-- display-card:
+
+-- display-card.front:
+
+-- card.category.front: $card.name
+title: $card.title
+company: $card.company
+logo: $card.logo
+contact-1: $card.contact-1
+contact-2: $card.contact-2
+website-1: $card.website-1
+website-2: $card.website-2
+location: $card.location
+
+-- end: display-card.front
+
+-- display-card.back:
+
+-- card.category.back: $card.company
+logo: $card.logo
+company-slogan: $card.company-slogan
+
+-- end: display-card.back
+
+-- end: display-card
+
+-- end: card
+
+
+
+
+
+
+
+
+
 -- component details:
 module category: business-card
 caption name:
@@ -128,6 +177,109 @@ $on-mouse-leave$: $ftd.set-bool($a = $details.on-hover, v = false)
 
 
 
+
+
+
+
+
+
+-- component display-card:
+ftd.ui list front:
+ftd.ui list back:
+boolean $open: false
+private string card-id: this-display-card
+boolean $mouse-in: false
+boolean $on-hover: false
+boolean $mouse-over: false
+
+-- ftd.column:
+width if { ftd.device == "mobile" }: fill-container
+
+-- ftd.row:
+width if { ftd.device == "mobile" }: fill-container
+spacing.fixed.px: 24
+
+-- ftd.column:
+width: fill-container
+id: $display-card.card-id
+
+-- ftd.column:
+if: { !display-card.open }
+width: fill-container
+height: fill-container
+
+-- front-ui:
+if: { index == 0 && !display-card.open }
+for: front-ui, index in $display-card.front
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { display-card.open }
+width: fill-container
+height: fill-container
+
+-- back-ui:
+if: { index == 0 && display-card.open}
+for: back-ui, index in $display-card.back
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $assets.files.assets.fastn-badge-white.svg
+width.fixed.px: 140
+link: https://fastn.com/
+align-self: center
+margin-top.px: 8
+open-in-new-tab: true
+
+-- end: ftd.column
+
+-- ftd.column:
+spacing.fixed.px: 12
+align-content: center
+
+-- ftd.image:
+if: { !display-card.mouse-in }
+src: $assets.files.assets.flip-icon.svg
+width.fixed.px: 24
+height.fixed.px: 24
+$on-click$: $ftd.toggle($a = $display-card.open)
+$on-mouse-enter$: $ftd.set-bool($a = $display-card.mouse-in, v = true)
+
+-- ftd.image:
+if: { display-card.mouse-in }
+src: $assets.files.assets.flip-icon-hover.svg
+width.fixed.px: 24
+height.fixed.px: 24
+$on-click$: $ftd.toggle($a = $display-card.open)
+$on-mouse-leave$: $ftd.set-bool($a = $display-card.mouse-in, v = false)
+
+-- ftd.image:
+if: { display-card.open }
+src: $assets.files.assets.download.svg
+src if { display-card.mouse-over }: $assets.files.assets.download-hover.svg
+width.fixed.px: 30
+$on-click$: $utils.download-as-image(element_id = $display-card.card-id, filename = card-back.jpg)
+$on-mouse-enter$: $ftd.set-bool($a = $display-card.mouse-over, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $display-card.mouse-over, v = false)
+
+-- ftd.image:
+if: { !display-card.open }
+src: $assets.files.assets.download.svg
+src if { display-card.on-hover }: $assets.files.assets.download-hover.svg
+width.fixed.px: 30
+$on-click$: $utils.download-as-image(element_id = $display-card.card-id, filename = card-front.jpg)
+$on-mouse-enter$: $ftd.set-bool($a = $display-card.on-hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $display-card.on-hover, v = false)
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: display-card
 
 
 
