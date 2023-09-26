@@ -1,4 +1,4 @@
--- import: fastn-community.github.io/business-card
+-- import: gsalunke.github.io/business-card
 
 ;; home - for business card
 ;; how to use - for business card documentation components
@@ -9,7 +9,7 @@
 -- component how-to-use:
 caption name:
 string package-name: business-card
-string deployed-url: fastn-community.github.io/business-card
+string deployed-url: gsalunke.github.io/business-card
 optional string license-url:
 module c: business-card
 optional string company-name:
@@ -138,7 +138,7 @@ optional ftd.image-src qr-code:
 -- component home:
 caption name:
 string package-name: business-card
-string deployed-url: fastn-community.github.io/business-card
+string deployed-url: gsalunke.github.io/business-card
 optional string license-url:
 module c: business-card
 optional string company-name:
@@ -170,7 +170,7 @@ offerings, company slogan etc.
 -- cb.code: Add dependency into your FASTN.ftd
 lang: ftd
 
-\-- fastn.dependency: fastn-community.github.io/business-card
+\-- fastn.dependency: gsalunke.github.io/business-card
 
 -- site-doc.header: Business Card - front
 
@@ -186,7 +186,7 @@ qr-code: $home.qr-code
 -- cb.code: Import `business-card` into your `.ftd` file
 lang: ftd
 
-\-- import: fastn-community.github.io/business-card
+\-- import: gsalunke.github.io/business-card
 
 \-- business-card.ftont:  John Doe
 title: Software Developer
@@ -209,7 +209,7 @@ qr-code: $home.qr-code
 -- cb.code: Import `business-card` into your `.ftd` file
 lang: ftd
 
-\-- import: fastn-community.github.io/business-card
+\-- import: gsalunke.github.io/business-card
 
 \-- business-card.back: 
 logo: $assets.files.assets.ipsum-logo.svg
@@ -231,7 +231,7 @@ company-slogan: If you can type you can code
 -- component home-card:
 caption name:
 string package-name: business-card
-string package-full-name: fastn-community.github.io/business-card
+string package-full-name: gsalunke.github.io/business-card
 string license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
 module c: business-card
 optional string company-name:
@@ -300,7 +300,7 @@ website: $home-card.website
 -- component how-to-use-card:
 caption name:
 string package-name: business-card
-string package-full-name: fastn-community.github.io/business-card
+string package-full-name: gsalunke.github.io/business-card
 string license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
 module c: business-card
 optional string company-name:
@@ -427,7 +427,7 @@ It's used to define any website for your card component.
 -- component how-to-use-card-back:
 optional caption name:
 string package-name: business-card
-string package-full-name: fastn-community.github.io/business-card
+string package-full-name: gsalunke.github.io/business-card
 string license-url: https://github.com/fastn-community/business-card/blob/main/LICENSE
 module c: business-card
 optional string company-name:
