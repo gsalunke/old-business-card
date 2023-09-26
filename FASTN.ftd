@@ -1,7 +1,7 @@
 -- import: fastn
 
--- fastn.package: fastn-community.github.io/business-card
-favicon: /-/fastn-community.github.io/business-card/favicon.ico
+-- fastn.package: gsalunke.github.io/business-card
+favicon: /-/gsalunke.github.io/business-card/favicon.ico
 
 -- fastn.dependency: fastn-stack.github.io/fastn-js
 -- fastn.dependency: fastn-community.github.io/site-doc
@@ -10,7 +10,7 @@ favicon: /-/fastn-community.github.io/business-card/favicon.ico
 -- fastn.dependency: fastn-community.github.io/bling
 
 
--- fastn.auto-import: fastn-community.github.io/business-card/assets
+-- fastn.auto-import: gsalunke.github.io/business-card/assets
 -- fastn.auto-import: fastn-community.github.io/site-doc
 -- fastn.auto-import: cb
 -- fastn.auto-import: tf

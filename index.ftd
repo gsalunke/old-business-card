@@ -1,12 +1,12 @@
--- import: fastn-community.github.io/business-card/docs
--- import: fastn-community.github.io/business-card
+-- import: gsalunke.github.io/business-card/docs
+-- import: gsalunke.github.io/business-card
 -- import: fastn-stack.github.io/fastn-js/utils
 -- import: fastn-community.github.io/bling/note
 
 
 
 -- site-doc.doc-home: Business Card
-current-package: fastn-community.github.io/business-card
+current-package: gsalunke.github.io/business-card
 show-tabs: false
 github-url: https://github.com/fastn-community/business-card
 site-title: Business Card
@@ -110,7 +110,7 @@ website: www.johndoe.com
 
 -- string front-sample-code:
 
-\-- import: fastn-community.github.io/business-card
+\-- import: gsalunke.github.io/business-card
 
 \-- business-card.front: John Doe
 title: Software Developer
@@ -120,7 +120,7 @@ logo: $assets.files.assets.ipsum-logo.svg
 
 -- string back-sample-code:
 
-\-- import: fastn-community.github.io/business-card
+\-- import: gsalunke.github.io/business-card
 
 \-- business-card.back: 
 logo: $assets.files.assets.ipsum-logo.svg

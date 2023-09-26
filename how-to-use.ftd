@@ -1,7 +1,7 @@
--- import: fastn-community.github.io/business-card/docs
+-- import: gsalunke.github.io/business-card/docs
 
 -- docs.how-to-use: John Doe
 title: Software Developer
 email: john@xyz.com
 address: 123 Anywhere, Any City
-deployed-url: fastn-community.github.io/business-card
+deployed-url: gsalunke.github.io/business-card
